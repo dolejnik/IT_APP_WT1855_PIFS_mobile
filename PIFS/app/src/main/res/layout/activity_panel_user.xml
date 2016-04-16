@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Helloo, Logged successful"
+        android:text="Hello, logged successful"
         android:id="@+id/textView"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
@@ -24,32 +24,35 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="User Panel"
         android:id="@+id/textView2"
+        android:textSize="30dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My profile"
+        android:id="@+id/btn_profile"
+        android:layout_alignTop="@+id/btn_services"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My services"
+        android:id="@+id/btn_services"
+        android:layout_marginTop="49dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:textSize="30dp" />
+        android:layout_below="@+id/textView" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="UserID:"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="20dp" />
+        android:text="Logout"
+        android:id="@+id/btn_logout"
+        android:layout_alignTop="@+id/btn_services"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="......."
-        android:id="@+id/printUserID"
-        android:textSize="15dp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 </RelativeLayout>

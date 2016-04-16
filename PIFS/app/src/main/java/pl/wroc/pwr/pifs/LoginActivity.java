@@ -350,7 +350,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 Log.d("Response", token);
                 Log.d("Response", userId);
                 GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
-                mApp.setSomeVariable(userId);
+                mApp.setSomeVariable1(userId);
+                mApp.setSomeVariable2(token);
+                mApp.setSomeVariable3(mEmail);
+
 
             } catch (Exception e){
                 //Log.d("Response", "Catched error2");
