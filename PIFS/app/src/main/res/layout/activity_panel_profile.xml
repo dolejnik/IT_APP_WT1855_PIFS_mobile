@@ -78,7 +78,7 @@
         android:text="Name:"
         android:id="@+id/textView6"
         android:textSize="20dp"
-        android:layout_above="@+id/text_name"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -92,7 +92,7 @@
         android:layout_below="@+id/text_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp" />
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -103,9 +103,9 @@
         android:textSize="15dp"
         android:textIsSelectable="true"
         android:clickable="true"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -116,9 +116,9 @@
         android:textSize="15dp"
         android:textIsSelectable="true"
         android:clickable="true"
-        android:layout_below="@+id/textView7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7" />
 
     <TextView
         android:layout_width="wrap_content"

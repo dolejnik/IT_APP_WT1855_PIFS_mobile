@@ -19,7 +19,7 @@
         android:src="@mipmap/startup_image1" />
 
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
-        android:layout_height="253dp">
+        android:layout_height="192dp">
 
         <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
             android:layout_height="wrap_content" android:orientation="vertical"
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="v1.01"
+        android:text="v1.02"
         android:id="@+id/textView10"
         android:layout_row="6"
         android:layout_column="0" />

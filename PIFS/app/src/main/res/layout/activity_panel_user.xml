@@ -25,7 +25,7 @@
         android:text="User Panel"
         android:id="@+id/textView2"
         android:textSize="30dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -33,18 +33,18 @@
         android:layout_height="wrap_content"
         android:text="My profile"
         android:id="@+id/btn_profile"
-        android:layout_alignTop="@+id/btn_services"
-        android:layout_toLeftOf="@+id/textView2"
-        android:layout_toStartOf="@+id/textView2" />
+        android:layout_marginTop="67dp"
+        android:layout_below="@+id/textView"
+        android:layout_toStartOf="@+id/btn_services"
+        android:layout_toLeftOf="@+id/btn_services" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My services"
         android:id="@+id/btn_services"
-        android:layout_marginTop="49dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView" />
+        android:layout_alignTop="@+id/btn_profile"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -52,7 +52,16 @@
         android:text="Logout"
         android:id="@+id/btn_logout"
         android:layout_alignTop="@+id/btn_services"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+        android:layout_toEndOf="@+id/btn_services"
+        android:layout_toRightOf="@+id/btn_services" />
+
+    <ImageView
+        android:layout_width="159dp"
+        android:layout_height="159dp"
+        android:id="@+id/imageView2"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/startup_image1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

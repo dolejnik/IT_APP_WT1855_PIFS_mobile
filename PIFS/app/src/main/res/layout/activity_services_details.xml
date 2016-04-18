@@ -47,7 +47,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Status:"
         android:id="@+id/textView15"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/text_model"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -55,10 +55,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="More Info:"
+        android:text="Description:"
         android:id="@+id/textView16"
-        android:layout_marginTop="54dp"
-        android:layout_below="@+id/textView15"
+        android:layout_below="@+id/text_status"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -70,7 +69,9 @@
         android:id="@+id/text_orderid"
         android:layout_below="@+id/textView14"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignEnd="@+id/textView13" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,7 +81,9 @@
         android:id="@+id/text_brand"
         android:layout_below="@+id/textView12"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignEnd="@+id/textView13" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,7 +93,9 @@
         android:id="@+id/text_model"
         android:layout_below="@+id/textView13"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/text_Dto"
+        android:layout_toStartOf="@+id/text_Dto" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,6 +104,29 @@
         android:text="..............."
         android:id="@+id/text_status"
         android:layout_below="@+id/textView15"
+        android:layout_alignLeft="@+id/textView16"
+        android:layout_alignStart="@+id/textView16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="..............."
+        android:id="@+id/text_desc"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/textView17" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Estimated price (PLN):"
+        android:id="@+id/textView17"
+        android:layout_above="@+id/text_price"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -107,8 +135,52 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="..............."
-        android:id="@+id/textView21"
-        android:layout_below="@+id/textView16"
+        android:id="@+id/text_price"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Start date:"
+        android:id="@+id/textView18"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="..............."
+        android:id="@+id/text_Dfrom"
+        android:layout_below="@+id/textView18"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:layout_alignRight="@+id/text_desc"
+        android:layout_alignEnd="@+id/text_desc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="End date:"
+        android:id="@+id/textView19"
+        android:layout_above="@+id/textView13"
+        android:layout_alignLeft="@+id/text_Dfrom"
+        android:layout_alignStart="@+id/text_Dfrom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="..............."
+        android:id="@+id/text_Dto"
+        android:layout_below="@+id/textView19"
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
