@@ -164,15 +164,6 @@ public class services_details extends Activity {
                                 txtDateTo = (TextView) findViewById(R.id.text_Dto);
                                 txtDateTo.setText(rec1_dateTo3);
 
-
-
-
-
-
-
-
-
-
                             }
                         }
                     } catch (JSONException e){

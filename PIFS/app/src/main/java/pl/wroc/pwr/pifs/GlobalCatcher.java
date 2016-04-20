@@ -9,6 +9,7 @@ public class GlobalCatcher extends Application {
     private String someVariable1;
     private String someVariable2;
     private String someVariable3;
+    private String someVariable4;
 
     public String getSomeVariable1() {
         return someVariable1;
@@ -19,6 +20,9 @@ public class GlobalCatcher extends Application {
     public String getSomeVariable3() {
         return someVariable3;
     }
+    public String getSomeVariable4() {
+        return someVariable4;
+    }
 
     public void setSomeVariable1(String someVariable1) {
         this.someVariable1 = someVariable1;
@@ -27,4 +31,5 @@ public class GlobalCatcher extends Application {
         this.someVariable2 = someVariable2;
     }
     public void setSomeVariable3(String someVariable3) { this.someVariable3 = someVariable3; }
+    public void setSomeVariable4(String someVariable4) { this.someVariable4 = someVariable4; }
 }

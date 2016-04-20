@@ -337,7 +337,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 Log.d("CreateResponse", json.toString());
             } catch (Exception e) {
                 e.printStackTrace();
-                //Log.d("Response", "Catched error1");
+                Log.d("Response", "Catched error1");
                 return false;
             }
             try {

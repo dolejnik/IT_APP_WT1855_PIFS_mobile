@@ -44,11 +44,22 @@ public class panel_user extends AppCompatActivity {
         });
 
     }
-
+    public void minimizeApp() {
+        Intent startMain = new Intent(Intent.ACTION_MAIN);
+        startMain.addCategory(Intent.CATEGORY_HOME);
+        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(startMain);
+    }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("Response", "Stopped");
+        Log.d("Response", "Pause");
     }
+    @Override
+    public void onBackPressed() {
+        Log.d("Response", "BackPressed");
+        minimizeApp();
+    }
+
 }

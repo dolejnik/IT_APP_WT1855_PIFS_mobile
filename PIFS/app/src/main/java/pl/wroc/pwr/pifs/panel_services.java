@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -25,8 +26,14 @@ import java.util.List;
 
 public class panel_services extends ListActivity {
     // Progress Dialog
+    Button btnOpen;
+    Button btnReady;
+    Button btnCancelled;
+    Button btnAll;
+
     private ProgressDialog pDialog;
     String tokenID;
+    String varState;
     // Creating JSON Parser object
     JSONParser jParser = new JSONParser();
 
@@ -38,6 +45,7 @@ public class panel_services extends ListActivity {
     private static final String TAG_ORDERS = "Orders";
     private static final String TAG_ID_ORDER = "Id";
     private static final String TAG_DEVICE_MODEL = "DeviceModel";
+    private static final String TAG_CURRENTSTATE = "CurrentState";
 
     // products JSONArray
     JSONArray orders = null;
@@ -48,6 +56,52 @@ public class panel_services extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel_services);
+        varState="Oczekuje";
+
+        btnOpen = (Button) findViewById(R.id.btn_Open);
+        btnOpen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
+                //mApp.setSomeVariable4("Oczekuje");
+                varState="Oczekuje";
+                ordersList = new ArrayList<HashMap<String, String>>();
+                new LoadAllProducts().execute();
+            }
+        });
+        btnReady = (Button) findViewById(R.id.btn_Ready);
+        btnReady.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
+                //mApp.setSomeVariable4("Do odebrania");
+                varState="Do odebrania";
+                ordersList = new ArrayList<HashMap<String, String>>();
+                new LoadAllProducts().execute();
+            }
+        });
+        btnCancelled = (Button) findViewById(R.id.btn_Cancelled);
+        btnCancelled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
+                //mApp.setSomeVariable4("Anulowane");
+                varState="Odrzucono";
+                ordersList = new ArrayList<HashMap<String, String>>();
+                new LoadAllProducts().execute();
+            }
+        });
+        btnAll = (Button) findViewById(R.id.btn_All);
+        btnAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
+                //mApp.setSomeVariable4("Anulowane");
+                varState="All";
+                ordersList = new ArrayList<HashMap<String, String>>();
+                new LoadAllProducts().execute();
+            }
+        });
 
         GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
         tokenID = mApp.getSomeVariable2();
@@ -142,17 +196,33 @@ public class panel_services extends ListActivity {
 
                     // Storing each json item in variable
                     String id = c.getString(TAG_ID_ORDER);
-                    String name = c.getString(TAG_ID_ORDER);
+                    String name = c.getString(TAG_DEVICE_MODEL);
+                    String rec1_curStatus="";
+                    JSONObject d = c.getJSONObject(TAG_CURRENTSTATE);
+                    try{
+                        rec1_curStatus = new String(d.getString("State").getBytes("ISO-8859-1"), "UTF-8");
+                    } catch (Exception e){
+                        Log.e("AllServices", e.getMessage());
+                    }
+                    String finalName = id+" ; "+name+" ; "+rec1_curStatus;
 
-                    // creating new HashMap
-                    HashMap<String, String> map = new HashMap<String, String>();
-
-                    // adding each child node to HashMap key => value
-                    map.put(TAG_ID_ORDER, id);
-                    map.put(TAG_ID_ORDER, name);
-
-                    // adding HashList to ArrayList
-                    ordersList.add(map);
+                    if (rec1_curStatus.equals(varState)){
+                        // creating new HashMap
+                        HashMap<String, String> map = new HashMap<String, String>();
+                        // adding each child node to HashMap key => value
+                        map.put(TAG_ID_ORDER, id);
+                        map.put(TAG_DEVICE_MODEL, finalName);
+                        // adding HashList to ArrayList
+                        ordersList.add(map);
+                    }
+                    if (varState.equals("All")){
+                        HashMap<String, String> map = new HashMap<String, String>();
+                        // adding each child node to HashMap key => value
+                        map.put(TAG_ID_ORDER, id);
+                        map.put(TAG_DEVICE_MODEL, finalName);
+                        // adding HashList to ArrayList
+                        ordersList.add(map);
+                    }
                 }
             } catch (Exception e){
                 Log.d("AllServices", "Catched error2");
@@ -175,7 +245,7 @@ public class panel_services extends ListActivity {
                     ListAdapter adapter = new SimpleAdapter(
                             panel_services.this, ordersList,
                             R.layout.list_item, new String[] {TAG_ID_ORDER,
-                            TAG_ID_ORDER},
+                            TAG_DEVICE_MODEL},
                             new int[] { R.id.id_order, R.id.device_name});
                     // updating listview
                     setListAdapter(adapter);
