@@ -44,6 +44,7 @@ public class panel_services extends ListActivity {
     // JSON Node names
     private static final String TAG_ORDERS = "Orders";
     private static final String TAG_ID_ORDER = "Id";
+    private static final String TAG_DEVICE_BRAND = "DeviceBrand";
     private static final String TAG_DEVICE_MODEL = "DeviceModel";
     private static final String TAG_CURRENTSTATE = "CurrentState";
 
@@ -196,6 +197,7 @@ public class panel_services extends ListActivity {
 
                     // Storing each json item in variable
                     String id = c.getString(TAG_ID_ORDER);
+                    String brand = c.getString(TAG_DEVICE_BRAND);
                     String name = c.getString(TAG_DEVICE_MODEL);
                     String rec1_curStatus="";
                     JSONObject d = c.getJSONObject(TAG_CURRENTSTATE);
@@ -204,7 +206,7 @@ public class panel_services extends ListActivity {
                     } catch (Exception e){
                         Log.e("AllServices", e.getMessage());
                     }
-                    String finalName = id+" ; "+name+" ; "+rec1_curStatus;
+                    String finalName = id+". "+brand+" "+name+" - "+rec1_curStatus;
 
                     if (rec1_curStatus.equals(varState)){
                         // creating new HashMap

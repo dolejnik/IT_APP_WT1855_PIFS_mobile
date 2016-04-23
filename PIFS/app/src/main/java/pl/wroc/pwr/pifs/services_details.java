@@ -136,14 +136,25 @@ public class services_details extends Activity {
                                 //String rec1_price = d.getString("Price");
                                 try{
                                     String rec1_curStatus = new String(d.getString("State").getBytes("ISO-8859-1"), "UTF-8");
+                                    String rec1_desc = new String(d.getString("Description").getBytes("ISO-8859-1"), "UTF-8");
+                                    String rec1_price = new String(d.getString("Price").getBytes("ISO-8859-1"), "UTF-8");
+
+                                    if (rec1_curStatus.equals("null")){
+                                        rec1_curStatus="";
+                                    }
+                                    if (rec1_desc.equals("null")){
+                                        rec1_desc="";
+                                    }
+                                    if (rec1_price.equals("null")){
+                                        rec1_price="";
+                                    }
+
                                     txtcurStatus = (TextView) findViewById(R.id.text_status);
                                     txtcurStatus.setText(rec1_curStatus);
 
-                                    String rec1_desc = new String(d.getString("Description").getBytes("ISO-8859-1"), "UTF-8");
                                     txtDesc = (TextView) findViewById(R.id.text_desc);
                                     txtDesc.setText(rec1_desc);
 
-                                    String rec1_price = new String(d.getString("Price").getBytes("ISO-8859-1"), "UTF-8");
                                     txtPrice = (TextView) findViewById(R.id.text_price);
                                     txtPrice.setText(rec1_price);
                                 } catch (Exception e){
@@ -155,12 +166,18 @@ public class services_details extends Activity {
                                 String rec1_dateFrom2 = rec1_dateFrom.replaceAll("T", " ");
                                 String rec1_dateFrom3 = rec1_dateFrom2.split("\\.", 2)[0];
 
-                                txtDateFrom = (TextView) findViewById(R.id.text_Dfrom);
-                                txtDateFrom.setText(rec1_dateFrom3);
-
                                 String rec1_dateTo = d.getString("DateTo");
                                 String rec1_dateTo2 = rec1_dateTo.replaceAll("T", ",");
                                 String rec1_dateTo3 = rec1_dateTo2.split("\\.", 2)[0];
+                                if (rec1_dateFrom3.equals("null")){
+                                    rec1_dateFrom3="";
+                                }
+                                if (rec1_dateTo3.equals("null")){
+                                    rec1_dateTo3="";
+                                }
+
+                                txtDateFrom = (TextView) findViewById(R.id.text_Dfrom);
+                                txtDateFrom.setText(rec1_dateFrom3);
                                 txtDateTo = (TextView) findViewById(R.id.text_Dto);
                                 txtDateTo.setText(rec1_dateTo3);
 

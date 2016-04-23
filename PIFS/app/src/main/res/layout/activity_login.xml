@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="v1.03"
+        android:text="v1.04"
         android:id="@+id/textView10"
         android:layout_row="6"
         android:layout_column="0" />
@@ -68,7 +68,7 @@
         android:layout_width="111dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Credits: \nMaciej Bozemoj Maciej Moscinski"
+        android:text="Credits: \nMaciej Bozemoj Dawid Olejnik"
         android:id="@+id/textView11"
         android:maxLines="3"
         android:layout_gravity="center_horizontal"
