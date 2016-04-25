@@ -83,7 +83,7 @@ public class services_details extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(services_details.this);
-            pDialog.setMessage("Loading order details. Please wait...");
+            pDialog.setMessage(getString(R.string.loading_orders));
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();

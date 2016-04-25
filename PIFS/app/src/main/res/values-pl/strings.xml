@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PIFS</string>
+    <string name="Order_ID">ID:</string>
+    <string name="action_sign_in">Zaloguj lub zarejestruj</string>
+    <string name="action_sign_in_short">Zaloguj</string>
+    <string name="all">Wszystkie</string>
+    <string name="brand">Marka:</string>
+    <string name="cancelled">Cofnięte</string>
+    <string name="credits">Autorzy:</string>
+    <string name="date_end">Data zakończenia:</string>
+    <string name="date_start">Data rozpoczęcia:</string>
+    <string name="description">Opis:</string>
+    <string name="devicemodel">Model:</string>
+    <string name="error_field_required">To pole jest wymagane</string>
+    <string name="error_incorrect_password">To hasło jest nieprawidłowe</string>
+    <string name="error_invalid_email">Ten adres jest nieprawidłowy</string>
+    <string name="error_invalid_password">To hasło jest zbyt krótkie</string>
+    <string name="estprice">Przewidywana cena (PLN):</string>
+    <string name="lastname">Nazwisko</string>
+    <string name="loading_orders">Ładowanie szczegółów zamowienia...</string>
+    <string name="loading_services">Ładowanie zamówień...</string>
+    <string name="logout">Wyloguj</string>
+    <string name="myprofile">Mój profil</string>
+    <string name="myservices">Moje zamówienia</string>
+    <string name="name">Imię</string>
+    <string name="open">Otwarte</string>
+    <string name="permission_rationale">Uprawnienia kontaktów są potrzebne do otrzymania emailu</string>
+    <string name="prompt_email">Adres email</string>
+    <string name="prompt_password">Hasło</string>
+    <string name="ready">Gotowe</string>
+    <string name="status">Status:</string>
+    <string name="userpanel">Panel użytkownika</string>
+    <string name="welcomemsg">Witamy, zalogowano poprawnie</string>
+</resources>

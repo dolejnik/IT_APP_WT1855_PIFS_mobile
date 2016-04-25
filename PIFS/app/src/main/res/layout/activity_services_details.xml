@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Brand:"
+        android:text="@string/brand"
         android:id="@+id/textView12"
         android:layout_marginTop="46dp"
         android:layout_below="@+id/textView14"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Device Model:"
+        android:text="@string/devicemodel"
         android:id="@+id/textView13"
         android:layout_marginTop="15dp"
         android:textStyle="bold"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Status:"
+        android:text="@string/status"
         android:id="@+id/textView15"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Description:"
+        android:text="@string/description"
         android:id="@+id/textView16"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -81,12 +81,11 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="..............."
         android:id="@+id/text_orderid"
-        android:layout_below="@+id/textView14"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="18dp"
-        android:layout_alignRight="@+id/textView16"
-        android:layout_alignEnd="@+id/textView16" />
+        android:layout_toStartOf="@+id/textView18"
+        android:layout_alignTop="@+id/text_Dfrom" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -98,8 +97,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="18dp"
-        android:layout_alignRight="@+id/text_orderid"
-        android:layout_alignEnd="@+id/text_orderid" />
+        android:layout_toStartOf="@+id/text_Dfrom" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -143,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Estimated price (PLN):"
+        android:text="@string/estprice"
         android:id="@+id/textView17"
         android:layout_above="@+id/text_price"
         android:layout_alignParentLeft="true"
@@ -167,49 +165,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Start date:"
+        android:text="@string/date_start"
         android:id="@+id/textView18"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/textView17"
-        android:layout_alignEnd="@+id/textView17" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="..............."
-        android:id="@+id/text_Dfrom"
-        android:layout_below="@+id/textView18"
-        android:layout_alignLeft="@+id/textView19"
-        android:layout_alignStart="@+id/textView19"
+        android:layout_above="@+id/textView12"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="18dp" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="End date:"
+        android:text="......................................................"
+        android:id="@+id/text_Dfrom"
+        android:textSize="18dp"
+        android:layout_below="@+id/textView18"
+        android:layout_alignRight="@+id/text_desc"
+        android:layout_alignEnd="@+id/text_desc"
+        android:layout_toEndOf="@+id/text_orderid" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/date_end"
         android:id="@+id/textView19"
         android:textStyle="bold"
         android:textSize="20dp"
         android:layout_alignTop="@+id/textView12"
-        android:layout_alignLeft="@+id/textView18"
-        android:layout_alignStart="@+id/textView18" />
+        android:layout_toRightOf="@+id/text_brand"
+        android:layout_toEndOf="@+id/text_brand" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="..............."
+        android:text="......................................................"
         android:id="@+id/text_Dto"
+        android:textSize="18dp"
         android:layout_below="@+id/textView19"
-        android:layout_alignLeft="@+id/textView19"
-        android:layout_alignStart="@+id/textView19"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textSize="18dp" />
+        android:layout_toRightOf="@+id/text_brand"
+        android:layout_toEndOf="@+id/text_brand" />
 </RelativeLayout>

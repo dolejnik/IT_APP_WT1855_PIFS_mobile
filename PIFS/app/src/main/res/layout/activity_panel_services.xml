@@ -10,12 +10,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="My Services"
+        android:text="@string/myservices"
         android:id="@+id/textView8"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp" />
 
@@ -32,41 +32,41 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Open"
+        android:text="@string/open"
         android:id="@+id/btn_Open"
         android:layout_below="@+id/textView8"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textSize="16dp" />
+        android:textSize="14sp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancelled"
+        android:text="@string/cancelled"
         android:id="@+id/btn_Cancelled"
         android:layout_alignTop="@+id/btn_Ready"
         android:layout_toRightOf="@+id/btn_Ready"
         android:layout_toEndOf="@+id/btn_Ready"
-        android:textSize="16dp" />
+        android:textSize="14sp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ready"
+        android:text="@string/ready"
         android:id="@+id/btn_Ready"
         android:layout_above="@android:id/list"
         android:layout_toRightOf="@+id/btn_Open"
-        android:textSize="16dp" />
+        android:textSize="14sp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="All"
+        android:text="@string/all"
         android:id="@+id/btn_All"
-        android:textSize="16dp"
+        android:textSize="14sp"
         android:layout_above="@android:id/list"
         android:layout_toRightOf="@+id/btn_Cancelled"
         android:layout_toEndOf="@+id/btn_Cancelled" />

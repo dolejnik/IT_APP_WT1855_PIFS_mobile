@@ -4,8 +4,11 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Typeface;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +28,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -40,6 +44,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -72,11 +77,58 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mLoginFormView;
     private String prev_token;
 
+    private Locale locale;
+    private Configuration config;
+
+    Button langPL;
+    Button langENG;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        langPL = (Button) findViewById(R.id.btn_langpl);
+        langPL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Language", "Pressed PL");
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                String languageToLoad  = "pl"; // your language
+                locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                config = new Configuration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config,
+                        getBaseContext().getResources().getDisplayMetrics());
+                finish();
+                startActivity(getIntent());
+            }
+        });
+        langENG = (Button) findViewById(R.id.btn_langeng);
+        langENG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Language", "Pressed ENG");
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+                String languageToLoad = prefs.getString("locale_override", "");
+                locale = new Locale(languageToLoad);
+                Locale.setDefault(locale);
+                config = new Configuration();
+                config.locale = locale;
+                getBaseContext().getResources().updateConfiguration(config,
+                        getBaseContext().getResources().getDisplayMetrics());
+                setContentView(R.layout.activity_login);
+                finish();
+                startActivity(getIntent());
+            }
+        });
+
+        langENG.setVisibility(View.VISIBLE);
+        langENG.setEnabled(true);
+        langPL.setVisibility(View.VISIBLE);
+        langENG.setEnabled(true);
         // Set up the login form.
         prev_token="Lol";
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -98,6 +150,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                langENG.setVisibility(View.INVISIBLE);
+                langENG.setEnabled(false);
+                langPL.setVisibility(View.INVISIBLE);
+                langENG.setEnabled(false);
                 attemptLogin();
             }
         });
@@ -105,6 +161,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("Response", "ResumeMain");
+        langENG.setVisibility(View.VISIBLE);
+        langENG.setEnabled(true);
+        langPL.setVisibility(View.VISIBLE);
+        langENG.setEnabled(true);
+    }
+
 
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {

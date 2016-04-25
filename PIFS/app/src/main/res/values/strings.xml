@@ -13,5 +13,33 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <string name="loading_orders">Loading order details. Please wait...</string>
+    <string name="loading_services">Loading services...</string>
+
+    <string name="credits">Credits</string>
+    <string name="userpanel">User Panel</string>
+    <string name="welcomemsg">Hello, logged successful</string>
+    <string name="myprofile">My Profile</string>
+    <string name="myservices">My Services</string>
+    <string name="logout">Logout</string>
+    <string name="name">Name</string>
+    <string name="lastname">Last name</string>
+
+    <string name="open">Open</string>
+    <string name="ready">Ready</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="all">All</string>
+
     <string name="Order_ID"><b>Order ID:</b></string>
+    <string name="date_start">Initiation date:</string>
+    <string name="date_end">Finish date:</string>
+    <string name="brand">Brand:</string>
+    <string name="devicemodel">Device model:</string>
+    <string name="status">Status:</string>
+    <string name="description">Description:</string>
+    <string name="estprice">Estimated price (PLN):</string>
+
+
+
 </resources>

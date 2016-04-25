@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Hello, logged successful"
+        android:text="@string/welcomemsg"
         android:id="@+id/textView"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
@@ -22,38 +22,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="User Panel"
+        android:text="@string/userpanel"
         android:id="@+id/textView2"
         android:textSize="30dp"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My profile"
-        android:id="@+id/btn_profile"
-        android:layout_marginTop="67dp"
-        android:layout_below="@+id/textView"
-        android:layout_toStartOf="@+id/btn_services"
-        android:layout_toLeftOf="@+id/btn_services" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My services"
-        android:id="@+id/btn_services"
-        android:layout_alignTop="@+id/btn_profile"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:id="@+id/btn_logout"
-        android:layout_alignTop="@+id/btn_services"
-        android:layout_toEndOf="@+id/btn_services"
-        android:layout_toRightOf="@+id/btn_services" />
 
     <ImageView
         android:layout_width="159dp"
@@ -63,5 +36,33 @@
         android:src="@mipmap/startup_image1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myservices"
+        android:id="@+id/btn_services"
+        android:layout_alignTop="@+id/btn_profile"
+        android:layout_alignRight="@+id/btn_logout"
+        android:layout_alignEnd="@+id/btn_logout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myprofile"
+        android:id="@+id/btn_profile"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:id="@+id/btn_logout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

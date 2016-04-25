@@ -165,7 +165,7 @@ public class panel_services extends ListActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(panel_services.this);
-            pDialog.setMessage("Loading services...");
+            pDialog.setMessage(getString(R.string.loading_services));
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(false);
             pDialog.show();
