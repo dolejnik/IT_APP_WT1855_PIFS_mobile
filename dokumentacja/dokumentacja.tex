@@ -1,0 +1,140 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[top=1.5in, bottom=1.5in, left=0.8in, right=0.8in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,polish]{babel}
+\usepackage{indentfirst}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[all]{nowidow} 
+\usepackage{titletoc}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{relsize}
+
+\clubpenalty10000
+\widowpenalty10000
+
+\linespread{1.3}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\begin{document}
+% definicje 
+\makeatletter
+\newcommand{\linia}{\noindent\rule{\linewidth}{0.4mm}}
+\renewcommand{\maketitle}{
+\begin{titlepage}
+    \begin{center} \LARGE 
+    \textbf{\textsc{
+	    Politechnika Wrocławska \\
+	    Wydział Elektroniki}}
+    \end{center}
+	\linia
+
+	\vspace{3cm}
+	\begin{center}
+		\LARGE \textsc{\@title}
+	\end{center}
+	
+	\vspace{1cm}
+	\noindent
+	\begin{minipage}[t]{0.5\textwidth}
+		\begin{flushleft}
+			\textit{\small Autorzy:}\\
+			\normalsize \textsc{\@author} \par
+		\end{flushleft}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\begin{flushright}
+			\textit{\small Praca wykonana pod przewodnictwem:}\\
+			\normalsize \textsc{dr inż. Marek Woda} \par
+		\end{flushright}
+	\end{minipage}
+    % \vspace*{4cm}
+
+    \vfill
+    \begin{center}
+    Wrocław, \@date
+    \end{center}
+\end{titlepage}%
+}
+% definicje (end)
+
+
+
+\author{Samir Senhadri 123456\\ Adam Szady 200890 \\ Mateusz Chudik 200755 \\ Dawid Olejnik 200275 \\ Maciej Bożemój 200641 \\ Maciej Mościński 200893 }
+\title{Zastosowania Informatyki w Gospodarce - projekt\\ \vspace{1.5cm} Serwis urządzeń elektronicznych\\}
+\definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
+\lstset{language=C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{green}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#},
+	showstringspaces=false,
+	breaklines=true,
+	backgroundcolor=\color{anti-flashwhite},
+	tabsize=4
+}
+
+
+
+
+\newpage
+\maketitle
+\newpage
+
+\dottedcontents{section}[1.5em]{\addvspace{1pc}\bfseries}{1.5em}{0.7pc}
+
+\renewcommand\lstlistingname{Listing}
+\renewcommand\lstlistlistingname{Spis listingów}
+
+\tableofcontents
+
+\newpage
+
+\makeatother
+
+\section{Wstęp}
+\subsection{Geneza projektu}
+\subsection{Analiza stanu rynku}
+\section{Zakres projektu}
+\subsection{Cel projektu}
+\subsection{Funkcjonalności podstawowe}
+\subsection{Funkcjonalności rozszerzone}
+\subsection{Ryzyka projektowe}
+\section{Technologie zastosowane w projekcie}
+\subsection{Aplikacja webowa}
+\subsection{Aplikacja mobilna}
+\section{Plan projektu}
+\subsection{Kamienie milowe}
+\subsection{Wykres Gantta}
+\subsection{Rzeczywisty nakład pracy i koszty} 
+\section{Implementacja i wdrożenie projektu}
+\subsection{Implementacja aplikacji webowej}
+\subsection{Implementacja aplikacji mobilnej}
+\subsection{Instalacja projektu i wymagania sprzętowe}
+\section{Podsumowanie}
+
+\newpage
+\listoffigures
+\addcontentsline{toc}{section}{Spis rysunków} 
+\newpage
+\listoftables
+\addcontentsline{toc}{section}{Spis tablic}
+\newpage
+\lstlistoflistings
+\addcontentsline{toc}{section}{Spis listingów}
+
+
+\newpage
+\addcontentsline{toc}{section}{Literatura}
+\begin{thebibliography}{9}
+\bibitem{cormen} Cormen T., Leiseron C., Rivest R., Wprowadzenie do algorytmów, WNT, 2001. 
+\bibitem{kombi} Błażewicz J., Problemy optymalizacji kombinatorycznej, PWN, Warszawa, 1996.
+\bibitem{tabu} Strona internetowa: http://www.cs.put.poznan.pl/wkotlowski/teaching/8-ts.pdf, 25.01.2013r.
+\end{thebibliography}
+
+\end{document}
