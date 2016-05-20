@@ -8,8 +8,8 @@
     <string name="brand">Marka:</string>
     <string name="cancelled">Cofnięte</string>
     <string name="credits">Autorzy:</string>
-    <string name="date_end">Data zakończenia:</string>
-    <string name="date_start">Data rozpoczęcia:</string>
+    <string name="date_end">Koniec:</string>
+    <string name="date_start">Początek:</string>
     <string name="description">Opis:</string>
     <string name="devicemodel">Model:</string>
     <string name="error_field_required">To pole jest wymagane</string>
@@ -32,4 +32,19 @@
     <string name="status">Status:</string>
     <string name="userpanel">Panel użytkownika</string>
     <string name="welcomemsg">Witamy, zalogowano poprawnie</string>
+    <string name="state_accepted">0. Przyjęto</string>
+    <string name="state_contactClient">4. Kontakt z klientem</string>
+    <string name="state_done">6. Do odbioru</string>
+    <string name="state_inProgres">3. W naprawie</string>
+    <string name="state_ready">5. Zakończono</string>
+    <string name="state_rejected">7. Odrzucono</string>
+    <string name="state_update">1. Aktualizacja</string>
+    <string name="state_waitingComp">2. Oczekiwanie na części</string>
+    <string name="button_choice_part">Wybierz część ...</string>
+    <string name="mycomponents">Części zamienne</string>
+    <string name="userPrompt">Na pewno chcesz zamówić tą część?:</string>
+    <string name="userPromptNo">Nie</string>
+    <string name="userPromptYes">Tak</string>
+    <string name="chooseCompToast">Prośba o komponent wysłana</string>
+    <string name="jsonExToast">Ups.. Coś poszło nie tak..</string>
 </resources>

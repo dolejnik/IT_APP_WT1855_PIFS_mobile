@@ -13,11 +13,11 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.ExpandableListView;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -26,10 +26,13 @@ import java.util.List;
 
 public class panel_services extends ListActivity {
     // Progress Dialog
-    Button btnOpen;
-    Button btnReady;
-    Button btnCancelled;
     Button btnAll;
+
+    HashMap<String,List<String>> state_category;
+    List<String> state_list;
+    ExpandableListView choiceList;
+    state_adapter adapter;
+
 
     private ProgressDialog pDialog;
     String tokenID;
@@ -57,47 +60,28 @@ public class panel_services extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel_services);
-        varState="Oczekuje";
+        choiceList = (ExpandableListView) findViewById(R.id.expListView);
+        state_category = dataProvider.getInfo(getBaseContext());
+        state_list = new ArrayList<String>(state_category.keySet());
+        adapter = new state_adapter(this, state_category, state_list);
+        choiceList.setAdapter(adapter);
 
-        btnOpen = (Button) findViewById(R.id.btn_Open);
-        btnOpen.setOnClickListener(new View.OnClickListener() {
+        choiceList.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
-            public void onClick(View v) {
-                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
-                //mApp.setSomeVariable4("Oczekuje");
-                varState="Oczekuje";
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                choiceList.collapseGroup(groupPosition);
+                varState = state_category.get(state_list.get(groupPosition)).get(childPosition).split("\\.")[0];
                 ordersList = new ArrayList<HashMap<String, String>>();
                 new LoadAllProducts().execute();
+                return false;
             }
         });
-        btnReady = (Button) findViewById(R.id.btn_Ready);
-        btnReady.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
-                //mApp.setSomeVariable4("Do odebrania");
-                varState="Do odebrania";
-                ordersList = new ArrayList<HashMap<String, String>>();
-                new LoadAllProducts().execute();
-            }
-        });
-        btnCancelled = (Button) findViewById(R.id.btn_Cancelled);
-        btnCancelled.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
-                //mApp.setSomeVariable4("Anulowane");
-                varState="Odrzucono";
-                ordersList = new ArrayList<HashMap<String, String>>();
-                new LoadAllProducts().execute();
-            }
-        });
+
+        varState="All";
         btnAll = (Button) findViewById(R.id.btn_All);
         btnAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //GlobalCatcher mApp = ((GlobalCatcher)getApplicationContext());
-                //mApp.setSomeVariable4("Anulowane");
                 varState="All";
                 ordersList = new ArrayList<HashMap<String, String>>();
                 new LoadAllProducts().execute();
@@ -206,7 +190,43 @@ public class panel_services extends ListActivity {
                     } catch (Exception e){
                         Log.e("AllServices", e.getMessage());
                     }
-                    String finalName = id+". "+brand+" "+name+" - "+rec1_curStatus;
+                    String rec2_curStatus="";
+                    // rec1_curStatus - this string is for number of state
+                    if (rec1_curStatus.equals("0"))
+                    {
+                        //rec2_curStatus = getString(R.string.state_accepted).split("\\.")[1];
+                        rec2_curStatus = getString(R.string.state_accepted);
+                    }
+                    if (rec1_curStatus.equals("1"))
+                    {
+                        rec2_curStatus = getString(R.string.state_update);
+                    }
+                    if (rec1_curStatus.equals("2"))
+                    {
+                        rec2_curStatus = getString(R.string.state_waitingComp);
+                    }
+                    if (rec1_curStatus.equals("3"))
+                    {
+                        rec2_curStatus = getString(R.string.state_inProgres);
+                    }
+                    if (rec1_curStatus.equals("4"))
+                    {
+                        rec2_curStatus = getString(R.string.state_contactClient);
+                    }
+                    if (rec1_curStatus.equals("5"))
+                    {
+                        rec2_curStatus = getString(R.string.state_ready);
+                    }
+                    if (rec1_curStatus.equals("6"))
+                    {
+                        rec2_curStatus = getString(R.string.state_done);
+                    }
+                    if (rec1_curStatus.equals("7"))
+                    {
+                        rec2_curStatus = getString(R.string.state_rejected);
+                    }
+
+                    String finalName = id+". "+brand+" "+name+" - "+rec2_curStatus;
 
                     if (rec1_curStatus.equals(varState)){
                         // creating new HashMap
@@ -244,7 +264,7 @@ public class panel_services extends ListActivity {
                     /**
                      * Updating parsed JSON data into ListView
                      * */
-                    ListAdapter adapter = new SimpleAdapter(
+                    SpecialAdapter adapter = new SpecialAdapter(
                             panel_services.this, ordersList,
                             R.layout.list_item, new String[] {TAG_ID_ORDER,
                             TAG_DEVICE_MODEL},

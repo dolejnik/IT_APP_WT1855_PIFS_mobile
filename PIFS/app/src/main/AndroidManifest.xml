@@ -28,6 +28,7 @@
         <activity android:name=".panel_user" />
         <activity android:name=".panel_profile" />
         <activity android:name=".panel_services" />
+        <activity android:name=".panel_components" />
         <activity android:name=".services_details"></activity>
     </application>
 

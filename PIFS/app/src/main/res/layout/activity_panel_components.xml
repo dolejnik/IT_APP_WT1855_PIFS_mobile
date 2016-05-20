@@ -4,13 +4,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
-    tools:context="pl.wroc.pwr.pifs.panel_services">
+    tools:context="pl.wroc.pwr.pifs.panel_components">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/myservices"
+        android:text="@string/mycomponents"
         android:id="@+id/textView8"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -26,29 +26,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="0dp"
-        android:layout_below="@+id/btn_All" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/all"
-        android:id="@+id/btn_All"
-        android:textSize="14sp"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ExpandableListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/expListView"
-        android:choiceMode="singleChoice"
-        android:background="@android:color/white"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView8"
-        android:layout_toLeftOf="@+id/btn_All"
-        android:layout_toStartOf="@+id/btn_All" />
+        android:layout_below="@+id/textView8" />
 
 </RelativeLayout>

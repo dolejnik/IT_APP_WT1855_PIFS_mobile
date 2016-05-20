@@ -22,6 +22,7 @@
     <string name="welcomemsg">Hello, logged successful</string>
     <string name="myprofile">My Profile</string>
     <string name="myservices">My Services</string>
+    <string name="mycomponents">Components</string>
     <string name="logout">Logout</string>
     <string name="name">Name</string>
     <string name="lastname">Last name</string>
@@ -32,14 +33,28 @@
     <string name="all">All</string>
 
     <string name="Order_ID"><b>Order ID:</b></string>
-    <string name="date_start">Initiation date:</string>
-    <string name="date_end">Finish date:</string>
+    <string name="date_start">Initiation:</string>
+    <string name="date_end">Finish:</string>
     <string name="brand">Brand:</string>
     <string name="devicemodel">Device model:</string>
     <string name="status">Status:</string>
     <string name="description">Description:</string>
     <string name="estprice">Estimated price (PLN):</string>
 
+    <string name="state_accepted">0. Accepted</string>
+    <string name="state_update">1. Update</string>
+    <string name="state_waitingComp">2. Component pending</string>
+    <string name="state_inProgres">3. In progress</string>
+    <string name="state_contactClient">4. Customer call</string>
+    <string name="state_ready">5. Ready</string>
+    <string name="state_done">6. Done</string>
+    <string name="state_rejected">7. Rejected</string>
 
+    <string name="button_choice_part">Choose component ...</string>
+    <string name="userPrompt">Are you sure to order this component?:</string>
+    <string name="userPromptYes">Yes</string>
+    <string name="userPromptNo">No</string>
+    <string name="chooseCompToast">Component request sent</string>
+    <string name="jsonExToast">Something went wrong..</string>
 
 </resources>
