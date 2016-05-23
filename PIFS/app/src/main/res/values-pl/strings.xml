@@ -22,7 +22,7 @@
     <string name="loading_services">Ładowanie zamówień...</string>
     <string name="logout">Wyloguj</string>
     <string name="myprofile">Mój profil</string>
-    <string name="myservices">Moje zamówienia</string>
+    <string name="myservices">Moje zgłoszenia</string>
     <string name="name">Imię</string>
     <string name="open">Otwarte</string>
     <string name="permission_rationale">Uprawnienia kontaktów są potrzebne do otrzymania emailu</string>
@@ -42,7 +42,7 @@
     <string name="state_waitingComp">2. Oczekiwanie na części</string>
     <string name="button_choice_part">Wybierz część ...</string>
     <string name="mycomponents">Części zamienne</string>
-    <string name="userPrompt">Na pewno chcesz zamówić tą część?:</string>
+    <string name="userPrompt">Na pewno chcesz zamówić tę część?:</string>
     <string name="userPromptNo">Nie</string>
     <string name="userPromptYes">Tak</string>
     <string name="chooseCompToast">Prośba o komponent wysłana</string>
