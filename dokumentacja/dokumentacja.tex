@@ -13,9 +13,12 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{relsize}
+\usepackage{chngcntr}
+\usepackage{float}
 
 \clubpenalty10000
 \widowpenalty10000
+\counterwithin{figure}{section}
 
 \linespread{1.3}
 \setcounter{secnumdepth}{5}
@@ -104,32 +107,70 @@ Idea projektu narodziła się w dość naturalny i przypadkowy sposób krótko p
 \subsection{Analiza stanu rynku}
 nic nie zostało zrobione
 \section{Zakres projektu}
-Podstawową fazą projektu było obmyślenie wymaganych funkcjonalności systemu, z podziałem na podstawowe (muszą koniecznie zostać zrealizowane aby system działał poprawnie) i rozszerzone (powiększą możliwości lub komfort użytkowania systemu, ale nie są niezbędne do jego funkcjonowania). Następnym krokiem było stworzenie schematu bazy danych SQL, a następnie równoległe utworzenie komponentu serwerowego komunikującego się z bazą danych i aplikacji webowej i mobilnej wykorzystującej API wystawione przez część serwerową.
+Podstawową fazą projektu było obmyślenie wymaganych funkcjonalności systemu, z podziałem na podstawowe (muszą koniecznie zostać zrealizowane aby system działał poprawnie) i rozszerzone (powiększą możliwości lub komfort użytkowania systemu, ale nie są niezbędne do jego funkcjonowania). Następnym krokiem było stworzenie schematu bazy danych SQL, a następnie równoległe utworzenie komponentu serwerowego komunikującego się z bazą danych i aplikacji webowej i mobilnej wykorzystującej API wystawione przez część serwerową. Aplikacja mobilna w zamierzeniu ma być narzędziem wykorzystywanym wyłącznie przez klientów serwisu, przez co jej funkcjonalność jest odpowiednio ograniczona.
 \subsection{Cel projektu}
-Celem projektu było wytworzenie intuicyjnego systemu komunikacji pomiędzy firmą serwisującą urządzenia elektroniczne a jej klientem. System miał być dostępny zarówno z poziomu przeglądarki internetowej jak i telefonu komórkowego opartego o system operacyjny Android. Docelowy produkt powinien umożliwić łatwe dopasowanie do wymagań konkretnego serwisu urządzeń elektronicznych chcącego skorzystać z usług projektowanego produktu, aby usystematyzować proces napraw i poprawić wizerunek u klienta.
+Celem projektu było wytworzenie intuicyjnego systemu komunikacji pomiędzy firmą serwisującą urządzenia elektroniczne a jej klientem. System miał być dostępny zarówno z poziomu przeglądarki internetowej jak i aplikacji zainstalowanej na telefonie komórkowym. Docelowy produkt powinien być na tyle uniwersalny aby uniknąć konieczności dopasowania do wymagań konkretnego serwisu urządzeń elektronicznych chcącego skorzystać z usług projektowanego produktu, aby usystematyzować proces napraw i poprawić wizerunek u klienta.
 \subsection{Funkcjonalności podstawowe}
 W projekcie wyróżnione zostały następujące funkcjonalności podstawowe:
 \begin{itemize}
-	\item LOREM
+	\item rejestracja użytkowników w systemie,
+	\item dodanie zgłoszenia naprawy,
+	\item aktualizacja stanu naprawy,
+	\item finalizowanie zgłoszenia,
+	\item generowanie rachunku,
+	\item przeglądanie aktualnych i archiwalnych napraw,
+	\item odzyskiwanie hasła.
 \end{itemize}
+Z poziomu aplikacji webowej mamy dostęp do wszystkich funkcjonalności systemu, z poziomu aplikacji mobilnej możemy wyłącznie przeglądać naprawy wraz z ich statusami.
 \subsection{Funkcjonalności rozszerzone}
 W projekcie wyróżnione zostały następujące funkcjonalności rozszerzone:
 \begin{itemize}
-	\item IPSUM
+	\item powiadomienie o zmianie statusu przez pocztę elektroniczną,
+	\item wybór elementów zamiennych przez klienta,
+	\item powiadomienie o zmianie statusu przez SMS.
 \end{itemize}
+Zarówno aplikacja webowa jak i mobilna umożliwiają klientowi wybór elementów zamiennych.
 \subsection{Ryzyka projektowe}
-\section{Technologie zastosowane w projekcie}
-\subsection{Aplikacja webowa}
-\subsection{Aplikacja mobilna}
-Aplikacja mobilna została stworzona na telefony z system operacyjnym Android (wymagana minimalna wersja X.Y.Z)
+
 \section{Plan projektu}
+Harmonogram projektu powstawał równolegle z procesem wyboru funkcjonalności podstawowych i rozszerzonych projektowanego systemu. Zostały wydzielone kamienie milowe projektu, oszacowano czas potrzebny na realizację poszczególnych zadań oraz stworzono wykres Gantta jako przejrzysty i prosty sposób na zarządzanie terminowością całego projektu.
+\\\\Planowany czas realizacji poszczególnych funkcjonalności:
+\begin{itemize}
+	\item stworzenie schematu bazy danych - 4h, 
+	\item rejestrowanie użytkowników w systemie - 10h, 
+	\item wprowadzenie zgłoszenia naprawy - 11h,
+	\item aktualizowanie stanu naprawy - 8h,
+	\item finalizowanie zgłoszenia wraz z generowaniem rachunku - 9h,
+	\item przeglądanie napraw - 9h,
+	\item odzyskiwanie hasła - 5h.
+\end{itemize}
+Sumaryczny przewidywany czas realizacji funkcjonalności wyniósł 56h.
 \subsection{Kamienie milowe}
+Wydzielone zostały trzy kamienie milowe projektu:
+\begin{itemize}
+	\item project kickoff (01.03.2016) - oficjalny start projektu, moment wieńczący etap działań koncepcyjnych, na które składały się m.in wybór tematu, określenie funkcjonalności systemu i podział ról w zespole,
+	\item prototyp (26.04.2016) - zakończenie prac nad prototypem aplikacji webowej i mobilnej, działająca baza danych i serwer aplikacji, zrealizowane wszystkie funkcjonalności podstawowe,
+	\item finał (07.06.2016) - zakończenie implementacji projektu, system w pełni sprawny, zrealizowane wszystkie funkcjonalności podstawowe i jak największy procent funkcjonalności rozszerzonych, ukończona dokumentacja projektowa.
+\end{itemize}
 \subsection{Wykres Gantta}
 \subsection{Rzeczywisty nakład pracy i koszty} 
 \section{Implementacja i wdrożenie projektu}
-\subsection{Implementacja aplikacji webowej}
-\subsection{Implementacja aplikacji mobilnej}
+W ramach realizacji projektu zaimplementowana została wielowarstwowa aplikacja internetowa z rozszerzeniem o aplikację mobilną. Model bazy danych stworzono zgodnie z podejściem „Database First” z wykorzystaniem technologii ADO.NET. Jako narzędzie do mapowania obiektowo relacyjnego wykorzystano platformę Entity Framework, natomiast zapytania do bazy danych zostały napisane w języku LINQ. Warstwa dostępu do danych została odseparowana od logiki aplikacji z wykorzystaniem warstwy logiki biznesowej. Utworzone zostały modele transferu danych odzwierciedlające modele warstwy dostępu do danych oraz modele widoku je zawierające, po to aby uniknąć korzystania z modeli warstwy dostępu do danych w warstwie aplikacji.
+
+Warstwa logiki aplikacji oraz warstwa prezentacji zostały zrealizowane w oparciu o platformę ASP.NET MVC 5. Autentykację użytkowników uzyskano z wykorzystaniem ASP.NET Identity. Do tworzenia widoków aplikacji wykorzystano składnię Razor, a sterowanie aplikacją zrealizowano za pomocą składnika platformy MVC o nazwie HTML Helper; wykorzystano również składniki biblioteki jQuery UI. Od strony wizualnej widoki zostały zaprojektowane z wykorzystaniem biblioteki Bootstrap oraz autorskich stylów CSS.
+
+Dzięki ogromnym możliwościom dostarczonym przez Entity Framework pomimo relatywnie skomplikowanej struktury bazy danych operacje typu CRUD nie przysparzają żadnego problemu. Wielką zaletą stosowanego narzędzia jest fakt, że obiekty bazodanowe zawierają referencje do powiązanych ze sobą tabel, dzięki czemu w bardzo prosty sposób można pobrać z bazy dane z powiązanych ze sobą tabel. Do mapowania obiektów warstwy dostępu do danych na obiekty transferowe wykorzystano Automapper. Podejście takie daje gwarancję że w razie rozbudowy bazy danych wystarczy uzupełnić obiekty warstwy transferu danych o nowe pola, nie trzeba natomiast przejmować się mapowaniem.
+
+Aplikacja mobilna została napisana w języku Android i została zaprojektowana na urządzenia z minimalną wersją systemu operacyjnego 4.0 (Ice Cream Sandwich). Aplikacja wykorzystuje własnoręcznie stworzone API do komunikacji z serwerem używając metod HTTP POST i GET, przesyłając dane w formacie JSON.
+\subsection{Diagram technologii wykorzystanych w projekcie}
+Rysunek 4.1 przedstawia schemat połączeń pomiędzy poszczególnymi komponentami projektu i wykorzystane technologie.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{diagramTechnologii.png}
+	\caption{Diagram wykorzystanych technologii}
+\end{figure}
 \subsection{Instalacja projektu i wymagania sprzętowe}
+\subsection{Instrukcja obsługi systemu}
 \section{Podsumowanie}
 
 \newpage

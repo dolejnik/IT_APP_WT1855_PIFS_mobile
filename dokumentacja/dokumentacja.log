@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.28)  4 JUN 2016 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.28)  5 JUN 2016 21:45
 entering extended mode
 **dokumentacja.tex
 (dokumentacja.tex
@@ -435,19 +435,30 @@ Package color Info: Driver file: pdftex.def on input line 142.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty"
+Package: chngcntr 2009/09/02 v1.0a change counter resetting
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count108
+\float@exts=\toks19
+\float@box=\box28
+\@float@everytoks=\toks20
+\@floatcapt=\box29
+)
 (dokumentacja.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -485,23 +496,24 @@ LaTeX Font Info:    ... okay on input line 23.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
+\scratchcounter=\count109
 \scratchdimen=\dimen132
-\scratchbox=\box28
-\nofMPsegments=\count109
-\nofMParguments=\count110
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count111
+\scratchbox=\box30
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count112
 \MPscratchDim=\dimen133
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
-\everyMPtoPDFconversion=\toks20
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks22
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count114
+\c@lstlisting=\count115
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -511,7 +523,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 86--86
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 89--89
 [] [] 
  []
 
@@ -528,31 +540,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 )
 \tf@toc=\write3
  [1] [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 113.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
- [3] [4]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+[3] [4] <diagramTechnologii.png, id=26, 6594.6375pt x 5028.7875pt>
+File: diagramTechnologii.png Graphic file (type png)
+
+<use diagramTechnologii.png>
+Package pdftex.def Info: diagramTechnologii.png used on input line 169.
+(pdftex.def)             Requested size: 481.79698pt x 376.9126pt.
+ [5] [6 <./diagramTechnologii.png>]
 (dokumentacja.lof)
 \tf@lof=\write4
- [5] (dokumentacja.lot)
+ [7] (dokumentacja.lot)
 \tf@lot=\write5
- [6] (dokumentacja.lol)
+ [8] (dokumentacja.lol)
 \tf@lol=\write6
- [7] [8]
+ [9] [10]
 (dokumentacja.aux) ) 
 Here is how much of TeX's memory you used:
- 5648 strings out of 493673
- 81979 string characters out of 3141517
- 168504 words of memory out of 3000000
- 8895 multiletter control sequences out of 15000+200000
+ 5719 strings out of 493673
+ 83139 string characters out of 3141517
+ 170422 words of memory out of 3000000
+ 8956 multiletter control sequences out of 15000+200000
  15974 words of font info for 36 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 44i,5n,58p,1163b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,7n,58p,1163b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
 ur\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9
 \fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\macie_000\AppData\Lo
@@ -564,9 +587,9 @@ en\ec\dpi600\ecti1000.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk
 \ljfour\jknappen\ec\dpi600\eccc1728.pk> <C:\Users\macie_000\AppData\Local\MiKTe
 X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1728.pk><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on dokumentacja.pdf (9 pages, 127353 bytes).
+Output written on dokumentacja.pdf (11 pages, 1552506 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
+ 374 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
