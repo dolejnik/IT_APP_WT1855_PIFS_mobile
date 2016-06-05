@@ -64,7 +64,7 @@ public class services_details extends Activity {
                 startActivity(i);
             }
         });
-        chComp.setEnabled(false);
+        chComp.setVisibility(View.INVISIBLE);
 
 
         //TextView tx = (TextView)findViewById(R.id.text_desc);
@@ -183,7 +183,7 @@ public class services_details extends Activity {
                                     {
                                         rec2_curStatus = getString(R.string.state_contactClient).split("\\. ")[1];
                                         //Button enable
-                                        chComp.setEnabled(true);
+                                        chComp.setVisibility(View.VISIBLE);
                                     }
                                     if (rec1_curStatus.equals("5"))
                                     {
