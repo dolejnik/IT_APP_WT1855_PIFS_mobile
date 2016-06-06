@@ -4,22 +4,21 @@
 \contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{2}
 \contentsline {subsection}{\numberline {1.1}Geneza projektu}{2}
 \contentsline {subsection}{\numberline {1.2}Analiza stanu rynku}{2}
-\contentsline {section}{\numberline {2}Zakres projektu}{2}
+\contentsline {section}{\numberline {2}Zakres projektu}{3}
 \contentsline {subsection}{\numberline {2.1}Cel projektu}{3}
 \contentsline {subsection}{\numberline {2.2}Funkcjonalno\IeC {\'s}ci podstawowe}{3}
-\contentsline {subsection}{\numberline {2.3}Funkcjonalno\IeC {\'s}ci rozszerzone}{3}
+\contentsline {subsection}{\numberline {2.3}Funkcjonalno\IeC {\'s}ci rozszerzone}{4}
 \contentsline {subsection}{\numberline {2.4}Ryzyka projektowe}{4}
-\contentsline {section}{\numberline {3}Plan projektu}{4}
-\contentsline {subsection}{\numberline {3.1}Kamienie milowe}{4}
-\contentsline {subsection}{\numberline {3.2}Wykres Gantta}{5}
-\contentsline {subsection}{\numberline {3.3}Rzeczywisty nak\IeC {\l }ad pracy i koszty}{5}
-\contentsline {section}{\numberline {4}Implementacja i wdro\IeC {\.z}enie projektu}{5}
-\contentsline {subsection}{\numberline {4.1}Diagram technologii wykorzystanych w projekcie}{5}
-\contentsline {subsection}{\numberline {4.2}Instalacja projektu i wymagania sprz\IeC {\k e}towe}{6}
-\contentsline {subsection}{\numberline {4.3}Instrukcja obs\IeC {\l }ugi systemu}{6}
-\contentsline {section}{\numberline {5}Podsumowanie}{6}
-\contentsline {section}{Spis rysunk\IeC {\'o}w}{7}
-\contentsline {section}{Spis tablic}{8}
-\contentsline {section}{Spis listing\IeC {\'o}w}{9}
-\contentsline {section}{Literatura}{10}
+\contentsline {section}{\numberline {3}Plan projektu}{7}
+\contentsline {subsection}{\numberline {3.1}Kamienie milowe}{7}
+\contentsline {subsection}{\numberline {3.2}Wykres Gantta}{8}
+\contentsline {subsection}{\numberline {3.3}Rzeczywisty nak\IeC {\l }ad pracy i koszty}{8}
+\contentsline {section}{\numberline {4}Implementacja i wdro\IeC {\.z}enie projektu}{9}
+\contentsline {subsection}{\numberline {4.1}Diagram technologii wykorzystanych w projekcie}{10}
+\contentsline {subsection}{\numberline {4.2}Instalacja projektu i wymagania sprz\IeC {\k e}towe}{11}
+\contentsline {subsection}{\numberline {4.3}Instrukcja obs\IeC {\l }ugi systemu}{12}
+\contentsline {section}{\numberline {5}Podsumowanie}{12}
+\contentsline {section}{Spis rysunk\IeC {\'o}w}{13}
+\contentsline {section}{Spis tablic}{14}
+\contentsline {section}{Literatura}{15}
 \contentsfinish 
