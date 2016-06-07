@@ -3,7 +3,9 @@
 \usepackage[top=1.5in, bottom=1.5in, left=0.8in, right=0.8in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english,polish]{babel}
+
+\usepackage{polski}
+
 \usepackage{indentfirst}
 \usepackage{multirow}
 \usepackage{graphicx}
@@ -16,6 +18,7 @@
 \usepackage{chngcntr}
 \usepackage{longtable}
 \usepackage{float}
+\extrafloats{100}
 \usepackage[table]{xcolor} 
 \usepackage{rotating}
 \clubpenalty10000
@@ -23,55 +26,316 @@
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
+
 \linespread{1.3}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
-\begin{document}
+
 % definicje 
 \makeatletter
 \newcommand{\linia}{\noindent\rule{\linewidth}{0.4mm}}
-\renewcommand{\maketitle}{
-\begin{titlepage}
-    \begin{center} \LARGE 
-    \textbf{\textsc{
-	    Politechnika Wrocławska \\
-	    Wydział Elektroniki}}
-    \end{center}
-	\linia
-
-	\vspace{3cm}
-	\begin{center}
-		\LARGE \textsc{\@title}
-	\end{center}
-	
-	\vspace{1cm}
-	\noindent
-	\begin{minipage}[t]{0.5\textwidth}
-		\begin{flushleft}
-			\textit{\small Autorzy:}\\
-			\normalsize \textsc{\@author} \par
-		\end{flushleft}
-	\end{minipage}
-	\begin{minipage}[t]{0.5\textwidth}
-		\begin{flushright}
-			\textit{\small Praca wykonana pod przewodnictwem:}\\
-			\normalsize \textsc{dr inż. Marek Woda} \par
-		\end{flushright}
-	\end{minipage}
-    % \vspace*{4cm}
-
-    \vfill
-    \begin{center}
-    Wrocław, \@date
-    \end{center}
-\end{titlepage}%
+%dodatkowe polecenia zmiany czcionki na 12pt dla poprawnego złożenia strony tytułowej
+\newcommand\@normalsizetemp{%
+	\@setfontsize\normalsize\@xiipt{14.5}%
+	\abovedisplayskip 12\p@ \@plus3\p@ \@minus7\p@
+	\abovedisplayshortskip \z@ \@plus3\p@
+	\belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@
+	\belowdisplayskip \abovedisplayskip
+	\let\@listi\@listI}
+\newcommand\@small{%
+	\@setfontsize\small\@xipt{13.6}%
+	\abovedisplayskip 11\p@ \@plus3\p@ \@minus6\p@
+	\abovedisplayshortskip \z@ \@plus3\p@
+	\belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@
+	\def\@listi{\leftmargin\leftmargini
+		\topsep 9\p@ \@plus3\p@ \@minus5\p@
+		\parsep 4.5\p@ \@plus2\p@ \@minus\p@
+		\itemsep \parsep}%
+	\belowdisplayskip \abovedisplayskip
 }
+\newcommand\@footnotesize{%
+	\@setfontsize\footnotesize\@xpt\@xiipt
+	\abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+	\abovedisplayshortskip \z@ \@plus3\p@
+	\belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+	\def\@listi{\leftmargin\leftmargini
+		\topsep 6\p@ \@plus2\p@ \@minus2\p@
+		\parsep 3\p@ \@plus2\p@ \@minus\p@
+		\itemsep \parsep}%
+	\belowdisplayskip \abovedisplayskip
+}
+\newcommand\@scriptsize{\@setfontsize\scriptsize\@viiipt{9.5}}
+\newcommand\@tiny{\@setfontsize\tiny\@vipt\@viipt}
+\newcommand\@large{\@setfontsize\large\@xivpt{18}}
+\newcommand\@Large{\@setfontsize\Large\@xviipt{22}}
+\newcommand\@LARGE{\@setfontsize\LARGE\@xxpt{25}}
+\newcommand\@huge{\@setfontsize\huge\@xxvpt{30}}
+\let\@Huge=\@huge
+
+%definicja tworząca stronę tytułową
+\def\maketitle{%
+	%chwilowa podmiana czcionki na 12pt w celu złożenia strony tytułowej
+	\setlength\smallskipamount{3\p@ \@plus 1\p@ \@minus 1\p@}
+	\setlength\medskipamount{6\p@ \@plus 2\p@ \@minus 2\p@}
+	\setlength\bigskipamount{12\p@ \@plus 4\p@ \@minus 4\p@}
+	\setlength\footnotesep{8.4\p@}
+	\setlength{\skip\footins}{10.8\p@ \@plus 4\p@ \@minus 2\p@}
+	\setlength\floatsep    {12\p@ \@plus 2\p@ \@minus 4\p@}
+	\setlength\textfloatsep{20\p@ \@plus 2\p@ \@minus 4\p@}
+	\setlength\intextsep   {14\p@ \@plus 4\p@ \@minus 4\p@}
+	\setlength\dblfloatsep    {14\p@ \@plus 2\p@ \@minus 4\p@}
+	\setlength\dbltextfloatsep{20\p@ \@plus 2\p@ \@minus 4\p@}
+	\setlength\@fptop{0\p@ \@plus 1fil}
+	\setlength\@fpsep{10\p@ \@plus 2fil}
+	\setlength\@fpbot{0\p@ \@plus 1fil}
+	\setlength\@dblfptop{0\p@ \@plus 1fil}
+	\setlength\@dblfpsep{10\p@ \@plus 2fil}
+	\setlength\@dblfpbot{0\p@ \@plus 1fil}
+	\setlength\partopsep{3\p@ \@plus 2\p@ \@minus 2\p@}
+	\def\@listi{\leftmargin\leftmargini
+		\parsep 5\p@  \@plus2.5\p@ \@minus\p@
+		\topsep 10\p@ \@plus4\p@   \@minus6\p@
+		\itemsep5\p@  \@plus2.5\p@ \@minus\p@}
+	\let\@listI\@listi
+	\@listi
+	\def\@listii {\leftmargin\leftmarginii
+		\labelwidth\leftmarginii
+		\advance\labelwidth-\labelsep
+		\topsep    5\p@   \@plus2.5\p@ \@minus\p@
+		\parsep    2.5\p@ \@plus\p@    \@minus\p@
+		\itemsep   \parsep}
+	\def\@listiii{\leftmargin\leftmarginiii
+		\labelwidth\leftmarginiii
+		\advance\labelwidth-\labelsep
+		\topsep    2.5\p@\@plus\p@\@minus\p@
+		\parsep    \z@
+		\partopsep \p@ \@plus\z@ \@minus\p@
+		\itemsep   \topsep}
+	\def\@listiv {\leftmargin\leftmarginiv
+		\labelwidth\leftmarginiv
+		\advance\labelwidth-\labelsep}
+	\def\@listv  {\leftmargin\leftmarginv
+		\labelwidth\leftmarginv
+		\advance\labelwidth-\labelsep}
+	\def\@listvi {\leftmargin\leftmarginvi
+		\labelwidth\leftmarginvi
+		\advance\labelwidth-\labelsep}
+	%chwilowa podmiana komend
+	\let\@tempnormalsize=\normalsize
+	\let\normalsize=\@normalsize
+	\let\@tempsmall=\small
+	\let\small=\@small
+	\let\@tempfootnotesize=\footnotesize
+	\let\footnotesize=\@footnotesize
+	\let\@tempscriptsize=\scriptsize
+	\let\scriptsize=\@sriptsize
+	\let\@temptiny=\tiny
+	\let\tiny=\@tiny
+	\let\@templarge=\large
+	\let\large=\@large
+	\let\@tempLarge=\Large
+	\let\Large=\@Large
+	\let\@tempLARGE=\LARGE
+	\let\LARGE=\@LARGE
+	\let\@temphuge=\huge
+	\let\huge=\@huge
+	\let\@tempHuge=\Huge
+	\let\Huge=\@Huge
+	%usunięcie warningów podczas składania strony tytułowej
+	\newcount{\@temphbadness}
+	\newcount{\@tempvbadness}
+	\newlength{\@temphfuzz}
+	\@temphbadness=\hbadness
+	\@tempvbadness=\vbadness
+	\@temphfuzz\hfuzz
+	\hbadness=10000
+	\vbadness=10000
+	\hfuzz=400pt
+	%ustawienie nowych marginesów dla strony tytułowej
+	\newlength{\@temptextwidth}
+	\@temptextwidth=\textwidth
+	\textwidth=\paperwidth
+	\newlength{\@temptextheight}
+	\newlength{\@temptopmargin}
+	\@temptopmargin=\topmargin
+	\topmargin=-1in
+	\newlength{\@tempheadheight}
+	\@tempheadheight=\headheight
+	\headheight=0pt
+	\newlength{\@tempheadsep}
+	\@tempheadsep=\headsep
+	\headsep=0pt
+	\newlength{\@tempoddsidemargin}
+	\@tempoddsidemargin=\oddsidemargin
+	\oddsidemargin=-1in
+	\newlength{\@tempevensidemargin}
+	\@tempevensidemargin=\evensidemargin
+	\evensidemargin=-1in
+	
+
+	\newcommand{\@university}{%
+		\LARGE  POLITECHNIKA WROC\L{}AWSKA \\[0mm] %
+		WYDZIA\L{} ELEKTRONIKI            %
+		\vspace{-6mm}%
+	}
+	\newcommand{\@fieldtext}{\Large\sc Kierunek:}
+	\newcommand{\@specialisationtext}{}
+	\newcommand{\@authortext}{\Large{\sc Autorzy:}}
+	\renewcommand{\@date}{\the\year}
+	
+	\newcommand{\@field}{\Large\sc Informatyka (INF)}
+	\newcommand{\@naglowek}{Zastosowania Informatyki w Gospodarce \\ Projekt\vspace{3cm} }
+	\newcommand{\@specialisation}{}
+	\newcommand{\@guardian}{}
+	\newcommand{\@napisProwadzacy}{\Large{\sc Prowadzący projekt:}}
+	\newcommand{\@supervisor}{dr inż. Marek Woda}
+	\newcommand{\@napisOcena}{\Large{\sc Ocena projektu:}}
+		\author{Samir Senhadri 200003\\ Adam Szady 200890 \\ Mateusz Chudzik 200755 \\ Dawid Olejnik 200275 \\ Maciej Bożemój 200641 \\ Maciej Mościński 200893 }
+		\title{\LARGE{Przepływ informacji firmy serwisowej}\vspace{1cm}}
+		
+		\renewcommand{\author}{\renewcommand{\@author}}
+		\renewcommand{\title}{\renewcommand{\@title}}
+
+
+
+	
+	
+	
+	%właściwe składanie strony tytułowej
+	\begin{titlepage}% 
+		
+		%\layout
+		\vbox{\vrule height44mm width0mm\\ \nopagebreak% odstęp od góry strony
+			\begin{minipage}[c][63mm]{\textwidth} %górna ramka z uczelnią, wydziałem, kierunkiem i specjalnością oraz tekst "PRACA DYPLOMOWA MAGISTERSKA" zdefiniowane z pływającymi odległościami i z możliwością wielolinijkowych kierunek i specjalność
+				\begin{center}\begin{minipage}[c][17mm]{16cm}
+						\begin{center}                              %
+							\@university%
+						\end{center}                                %
+						\mbox{}\hrulefill\mbox{}              %
+					\end{minipage}\\[11mm]
+					\begin{minipage}[c][\totalheight]{16cm}
+						\mbox{}
+						\vfill
+						%korekcja rozmieszczenia napisów Kierunek: i Specjalność: w zależności od wysokości (ilości linijek) w nazwie kierunku lub specjalności
+						\newlength{\@tempheightkier}
+						\newlength{\@tempheighttkier}
+						\settoheight{\@tempheighttkier}{\vbox{\@fieldtext}}
+						\settoheight{\@tempheightkier}{\vbox{\large \vrule height \@tempheighttkier width 0pt \@field}}
+						\settodepth{\@tempheighttkier}{\vbox{\large \vrule height \@tempheighttkier width 0pt \@field}}
+						\addtolength{\@tempheightkier}{\@tempheighttkier}
+						\settoheight{\@tempheighttkier}{\vbox{\@fieldtext}}
+						\addtolength{\@tempheightkier}{-\@tempheighttkier}
+						%
+						\newlength{\@tempheightspec}
+						\newlength{\@tempheighttspec}
+						\settoheight{\@tempheighttspec}{\vbox{\@specialisationtext}}
+						\settoheight{\@tempheightspec}{\vbox{\large \vrule height \@tempheighttspec width 0pt \@specialisation}}
+						\settodepth{\@tempheighttspec}{\vbox{\large \vrule height \@tempheighttspec width 0pt \@specialisation}}
+						\addtolength{\@tempheightspec}{\@tempheighttspec}
+						\settoheight{\@tempheighttspec}{\vbox{\@specialisationtext}}
+						\addtolength{\@tempheightspec}{-\@tempheighttspec}
+						%tabelka składająca kierunek i specjalność
+						\begin{tabular}{p{4.5cm}p{10.5cm}}
+							\parbox{4.5cm}{\@fieldtext \vrule depth \@tempheightkier width 0pt} & \parbox{10cm}{\large \vrule height \@tempheighttkier width 0pt \@field}\\
+							\parbox{4.5cm}{\@specialisationtext \vrule depth \@tempheightspec width 0pt } & \parbox{10cm}{\large \vrule height \@tempheighttspec width 0pt \@specialisation} 
+						\end{tabular}\mbox{}\\[5mm] \vfill
+						\begin{center}
+							\LARGE\bf \@naglowek
+						\end{center}\vspace{2cm}\vfill
+					\end{minipage}\end{center}
+				\end{minipage}\nopagebreak\linebreak
+				{\begin{minipage}[c][7.5cm]{7.3cm} %ramka pozycjonująca                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+						\mbox{}
+						%\fbox{My}\hfill\fbox{My}
+						%\vfill
+						%\fbox{My}\hfill\fbox{My}
+					\end{minipage}}
+					{\begin{minipage}[c][7.5cm][c]{11.2cm} %ramka z tytułami i autorem, widoczna w okienku okładki
+							\begin{center}
+								\begin{minipage}[c][7.3cm][c]{10.6cm}
+									\begin{center}
+										\vfil
+										\vspace{2cm}
+										\large \@title
+										
+										
+										
+										\vfil
+										\@authortext\\
+										\large \@author \vspace{2cm}
+										\vfil\mbox{}
+									\end{center}
+								\end{minipage}
+							\end{center}
+						\end{minipage}}\nolinebreak
+						{\begin{minipage}[c][7.5cm]{2.3cm} %ramka pozycjonująca
+								\mbox{}
+							\end{minipage}}\nopagebreak\linebreak
+							{\begin{minipage}[c][9.5cm]{8.4cm} %ramka pozycjonująca
+									\mbox{}
+								\end{minipage}}
+								{\begin{minipage}[c][9.5cm]{12.5cm} %ramka z promotorem i oceną
+										{\begin{minipage}[c][9.5cm]{10cm}
+												\vfill
+												{\Large\sc \@napisProwadzacy}\\[3mm]
+												{\large \@supervisor}\\
+												\vfill
+												\@guardian %tego nie ma jeżeli nie jest zdefiniowane, a nie powinno się definiować jeżeli prowadzący i opiekun to ta sama osoba
+												{\Large\sc \@napisOcena\\[20mm]}
+												\vfill\mbox{}
+											\end{minipage}}
+										\end{minipage}}
+										\begin{minipage}[c][2.0cm]{\paperwidth} % ramka stopka, rok wrzucany automatycznie lub z polecenia \date
+											\begin{center}\begin{minipage}[t][2.0cm]{16cm}
+													\noindent
+													\mbox{}\hrulefill\mbox{}\\[-9mm]
+													\begin{center}\large WROC\L{}AW \@date \end{center}
+												\end{minipage}\end{center}
+											\end{minipage}}
+											\nopagebreak \vskip -30cm \pagebreak %zabieg nie pozwalający łamać strony
+											
+										\end{titlepage}%koniec właściwego składania strony tytułowej
+										%
+										%powrót do wcześniejszych wartości aby znów zgłaszać błędy o Over i Under fullach
+										\hbadness=\@temphbadness
+										\vbadness=\@tempvbadness
+										\hfuzz\@temphfuzz
+										%powrót do standardowych marginesów itp
+										\topmargin=\@temptopmargin
+										\headheight=\@tempheadheight
+										\headsep=\@tempheadsep
+										\oddsidemargin=\@tempoddsidemargin
+										\evensidemargin=\@tempevensidemargin
+										\textwidth=\@temptextwidth
+										%powrót z rozmiaru 12pt do rozmiaru czcionki zależnego od wyboru
+										\let\normalsize=\@tempnormalsize
+										\let\small=\@tempsmall
+										\let\footnotesize=\@tempfootnotesize
+										\let\scriptsize=\@tempscriptsize
+										\let\tiny=\@temptiny
+										\let\large=\@templarge
+										\let\Large=\@tempLarge
+										\let\LARGE=\@tempLARGE
+										\let\huge=\@temphuge
+										\let\Huge=\@tempHuge
+										
+										\setcounter{footnote}{0}%
+										\global\let\thanks\relax
+										\global\let\maketitle\relax
+										\global\let\@thanks\@empty
+										\global\let\@author\@empty
+										\global\let\@date\@empty
+										\global\let\@title\@empty
+										\global\let\title\relax
+										\global\let\author\relax
+										\global\let\date\relax
+										\global\let\and\relax
+									}
 % definicje (end)
 
 
 
-\author{Samir Senhadri 123456\\ Adam Szady 200890 \\ Mateusz Chudzik 200755 \\ Dawid Olejnik 200275 \\ Maciej Bożemój 200641 \\ Maciej Mościński 200893 }
-\title{Zastosowania Informatyki w Gospodarce - projekt\\ \vspace{1.5cm} Przepływ informacji firmy serwisowej\\}
+
 \definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
 \lstset{language=C++,
 	basicstyle=\ttfamily,
@@ -86,16 +350,17 @@
 }
 
 
-
-
-\newpage
+\begin{document}
 \maketitle
+\newpage
+
 \newpage
 
 \dottedcontents{section}[1.5em]{\addvspace{1pc}\bfseries}{1.5em}{0.7pc}
 
 \renewcommand\lstlistingname{Listing}
 \renewcommand\lstlistlistingname{Spis listingów}
+\renewcommand\listtablename{Spis tabel}
 
 \tableofcontents
 
@@ -117,7 +382,7 @@ Rynek aplikacji i stron internetowych powiązanych z tematyką serwisowania i na
 	%\setlength\tabcolsep{0.1cm}
 	\begin{tabular}{l|l|}
 		\hline
-		\multicolumn{1}{|l||}{Nazwa systemu} & Wady w porównaniu z projektowanym systemem\\ \hline \hline
+		\multicolumn{1}{|l||}{\textbf{Nazwa systemu}} & \textbf{Wady w porównaniu z projektowanym systemem}\\ \hline \hline
 		\multicolumn{1}{|l||}{eSerwisowanie.pl} & limit pojemności bazy danych, brak aplikacji mobilnej \\ \hline
 		\multicolumn{1}{|l||}{MyIT CRM} & brak aplikacji dla klienta, stosowane oprogramowanie adware \\ \hline
 		\multicolumn{1}{|l||}{RepairShopr} & zamknięty i płatny system \\ \hline
@@ -260,17 +525,25 @@ Tablice 2.1, 2.2 i 2.3 przedstawiają przewidywane ryzyka projektowe uszeregowan
 \newpage
 \section{Plan projektu}
 Harmonogram projektu powstawał równolegle z procesem wyboru funkcjonalności podstawowych i rozszerzonych projektowanego systemu. Zostały wydzielone kamienie milowe projektu, oszacowano czas potrzebny na realizację poszczególnych zadań oraz stworzono wykres Gantta jako przejrzysty i prosty sposób na zarządzanie terminowością całego projektu.
-\\\\Planowany czas realizacji poszczególnych funkcjonalności:
-\begin{itemize}
-	\item stworzenie schematu bazy danych - 4h, 
-	\item rejestrowanie użytkowników w systemie - 10h, 
-	\item wprowadzenie zgłoszenia naprawy - 11h,
-	\item aktualizowanie stanu naprawy - 8h,
-	\item finalizowanie zgłoszenia wraz z generowaniem rachunku - 9h,
-	\item przeglądanie napraw - 9h,
-	\item odzyskiwanie hasła - 5h.
-\end{itemize}
-Sumaryczny przewidywany czas realizacji funkcjonalności wyniósł 56h.
+Tablica 3.1 zawiera planowany czas realizacji poszczególnych funkcjonalności:
+\begin{table}[H]
+	\centering
+	\caption{Przewidywany czas realizacji funkcjonalności}
+	\bgroup
+\begin{tabular}{|l|c|}
+	\hline
+	\multicolumn{1}{|c|}{\textbf{Funkcjonalność}} & \textbf{Planowany czas} \\ \hline \hline
+	 Stworzenie schematu bazy danych & 4h \\ \hline
+	 Rejestrowanie użytkowników w systemie & 10h \\ \hline
+	 Wprowadzenie zgłoszenia naprawy & 11h \\ \hline
+	 Aktualizowanie stanu naprawy & 8h \\ \hline
+	 Finalizowanie zgłoszenia wraz z generowaniem rachunku & 9h \\ \hline
+	 Przeglądanie napraw & 9h \\ \hline
+	 Odzyskiwanie hasła & 5h \\ \hline \hline
+	 \multicolumn{1}{|c|}{\textbf{Sumarycznie}} & \textbf{56h} \\ \hline
+\end{tabular}
+\egroup
+\end{table}
 \subsection{Kamienie milowe}
 Wydzielone zostały trzy kamienie milowe projektu:
 \begin{itemize}
@@ -301,20 +574,32 @@ Trzecia wersja diagramu Gantta powstała na sam koniec prac projektowych. Ponown
 \end{sidewaysfigure}
 \subsection{Rzeczywisty nakład pracy i koszty}
 Ze względu na otwarty charakter dostarczanego oprogramowania i brak planowanych bezpośrednich zysków z przedsięwzięcia zdecydowano o nieokreśleniu średniej stawki godzinowej pracy członka zespołu w projekcie. Konsekwentnie nie zostały obliczone sumaryczne koszty wytworzenia kompletnego produktu, jedynie nakład pracy wyrażony w godzinach.
-Rzeczywisty sumaryczny nakład pracy w projekcie różni się od antycypowanego w znaczącym stopniu ze względu na to, że podczas oryginalnego szacunku pominięto implementację funkcjonalności rozszerzonych aplikacji oraz stworzenie aplikacji mobilnej na urządzenia z systemem Android. Pierwotny plan czasu pracy okazał się jednak być bardzo celny w zakresie funkcjonalności podstawowych systemu. Rzeczywisty czas realizacji poszczególnych funkcjonalności był następujacy (w nawiasach wartości przewidywane):
-\begin{itemize}
-	\item stworzenie schematu bazy danych - 4h (4h), 
-	\item rejestrowanie użytkowników w systemie - 8h (10h), 
-	\item wprowadzenie zgłoszenia naprawy - 9h (11h),
-	\item aktualizowanie stanu naprawy - 11h (8h),
-	\item finalizowanie zgłoszenia wraz z generowaniem rachunku - 8h (9h),
-	\item przeglądanie napraw - 8h (9h),
-	\item odzyskiwanie hasła - 5h (5h).
-	\item powiadomienie o statusie przy użyciu e-mail - 3h (brak predykcji)
-	\item powiadomienie o statusie przy użyciu SMS - 12h (brak predykcji)
-	\item implementacja aplikacji mobilnej - 35h (brak predykcji)
-\end{itemize}
-Sumaryczny przewidywany czas realizacji funkcjonalności wyniósł 56h, a rzeczywisty czas realizacji funkcjonalności które zostały uwzględnione w predykcjach był o 3 godziny krótszy (spadek o 5.4 \%). Sumaryczny czas wszystkich prac implementacyjnych wynosi 103h, co daje wzrost względem wartości planowanej o 83.9 \%, jednak należy powtórnie podkreślić że tak duża różnica wynika z nieuwzględnienia prac nad aplikacją mobilną w trakcie pierwotnych predykcji.
+Rzeczywisty sumaryczny nakład pracy w projekcie różni się od antycypowanego w znaczącym stopniu ze względu na to, że podczas oryginalnego szacunku pominięto implementację funkcjonalności rozszerzonych aplikacji oraz stworzenie aplikacji mobilnej na urządzenia z systemem Android. Pierwotny plan czasu pracy okazał się jednak być bardzo celny w zakresie funkcjonalności podstawowych systemu. Rzeczywisty czas realizacji poszczególnych funkcjonalności  przedstawia tabela 3.2.
+\begin{table}[H]
+	\centering
+	\caption{Faktyczny czas realizacji funkcjonalności}
+	\bgroup
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\multicolumn{1}{|c|}{\textbf{Funkcjonalność}} & \textbf{Planowany czas} &\textbf{Rzeczywisty czas}\\ \hline \hline
+		Stworzenie schematu bazy danych & 4h & 4h\\ \hline
+		Rejestrowanie użytkowników w systemie & 10h & 8h \\ \hline
+		Wprowadzenie zgłoszenia naprawy & 11h & 9h \\ \hline
+		Aktualizowanie stanu naprawy & 8h & 11h\\ \hline
+		Finalizowanie zgłoszenia wraz z generowaniem rachunku & 9h & 8h \\ \hline
+		Przeglądanie napraw & 9h  & 8h\\ \hline
+		Odzyskiwanie hasła & 5h & 5h\\ \hline
+		Powiadomienie o statusie przy użyciu e-mail & brak predykcji & 3h\\ \hline
+		Powiadomienie o statusie przy użyciu SMS & brak predykcji & niezrealizowane\\ \hline
+		Wybór części zamiennych przez klienta & brak predykcji & 12h\\ \hline
+		Implementacja aplikacji mobilnej & brak predykcji & 35h\\ \hline \hline
+		\multicolumn{1}{|c|}{\textbf{Sumarycznie}} & \textbf{56h} & \textbf{103h} \\ \hline
+	\end{tabular}
+	\egroup
+\end{table}
+
+
+Sumaryczny przewidywany czas realizacji funkcjonalności wyniósł 56h, a rzeczywisty czas realizacji funkcjonalności które zostały uwzględnione w predykcjach był o 3 godziny krótszy (spadek o 5.4 \%). Sumaryczny czas wszystkich prac implementacyjnych wynosi 103h, co daje wzrost względem wartości planowanej o 83.9 \%, jednak należy powtórnie podkreślić że tak duża różnica wynika z nieuwzględnienia prac nad aplikacją mobilną w trakcie pierwotnych predykcji. Niezrealizowanie funkcjonalności służącej do powiadomienia użytkownika o zmianie statusu zamówienia przez SMS wynikło z nieprzewidzianych trudności realizacyjnych w zakresie komunikacji pomiędzy serwerem a bramką SMS - problem na rozwiązanie którego trzeba by poświęcić więcej czasu niż ten jakim autorzy projektu dysponowali w końcowej jego fazie.
 
 \section{Implementacja i wdrożenie projektu}
 W ramach realizacji projektu zaimplementowana została wielowarstwowa aplikacja internetowa z rozszerzeniem o aplikację mobilną. Model bazy danych stworzono zgodnie z podejściem „Database First” z wykorzystaniem technologii ADO.NET. Jako narzędzie do mapowania obiektowo relacyjnego wykorzystano platformę Entity Framework, natomiast zapytania do bazy danych zostały napisane w języku LINQ. Warstwa dostępu do danych została odseparowana od logiki aplikacji z wykorzystaniem warstwy logiki biznesowej. Utworzone zostały modele transferu danych odzwierciedlające modele warstwy dostępu do danych oraz modele widoku je zawierające, po to aby uniknąć korzystania z modeli warstwy dostępu do danych w warstwie aplikacji.
@@ -389,15 +674,112 @@ Ostatnim brakującym elementem układanki jest połączenie serwera z bazą dany
 \end{figure}
 
 Wdrożenie aplikacji mobilnej jest relatywnie prostym procesem. Po umieszczeniu aplikacji webowej na wybranym serwerze należy zmienić wykorzystywany URL w czterech plikach źródłowych aplikacji (\texttt{services\_details.java, panel\_services.java, panel\_components.java i LoginActivity.java}) na adres działającego własnego serwera, a następnie zbudować całą aplikację od początku. Otrzymany plik \texttt{*.apk} możemy już udostępnić do pobrania klientom serwisu np. poprzez istniejącą stronę internetową.
-\subsection{Instrukcja obsługi systemu}
+\subsection{Prezentacja działania i instrukcja obsługi systemu}
+\subsubsection{Aplikacja webowa}
+W ramach testowania realizowanego projektu serwer aplikacji i bazodanowy zostały umieszczone w chmurze Azure udostępnianej przez firmę Microsoft. Po otwarciu strony
+\begin{center}
+	\texttt{http://serviceofelectronicdevices.azurewebsites.net/}
+\end{center} pokazuje się ekran powitalny przedstawiony na rysunku 4.10.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{serwisGlowna.png}
+	\caption{Strona główna}
+\end{figure}
+
+Rysunek 4.11 przedstawia informacje o stronie internetowej, 4.12 formularz rejestracji nowego użytkownika a 4.13 panel logowania.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{serwisOnas.png}
+	\caption{Informacje o serwisie}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.4\textheight]{serwisRejestracja.png}
+	\caption{Formularz rejestracji}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.3\textheight]{serwisLogowanie.png}
+	\caption{Panel logowania}
+\end{figure}
+
+Po zalogowaniu mamy dostęp do listy zleceń oraz, zależnie od uprawnień użytkownika, innych funkcjonalności systemu. Wyróżniamy trzy różne poziomy uprawnień użytkowników - klient, pracownik i administrator systemu. Rysunki od 4.14 do 4.16 przedstawiają widok zleceń dla kolejno wzrastających poziomów uprawnień.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.3\textheight]{serwisKlient.png}
+	\caption{Zlecenia - klient}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{serwisWorker.png}
+	\caption{Zlecenia - pracownik}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{serwisZlecenia.png}
+	\caption{Zlecenia - administrator}
+\end{figure}
+
+Administrator systemu dodatkowo ma dostęp do panelu administracyjnego, z którego może dodawać i odbierać role innym użytkownikom oraz zarządzać częściami i produktami wykorzystywanymi w serwisie. Przedstawia to rysunek 4.17.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{serwisAdmin.png}
+	\caption{Panel administracyjny}
+\end{figure}
+
+\subsubsection{Aplikacja mobilna}
+Jako że aplikacja mobilna zawiera w sobie tylko część funkcjonalności aplikacji webowej jej obsługa jest tym bardziej prosta i intuicyjna. Działanie aplikacji zostanie przedstawione z wykorzystaniem jej polskiej wersji językowej. Rysunek 4.18 przedstawia ekran logowania aplikacji.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{startPolski.png}
+	\caption{Logowanie - j. polski}
+\end{figure}
+
+Rysunek 4.19 przedstawia ekran aplikacji bezpośrednio po zalogowaniu.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{logowaniePolski.png}
+	\caption{Pierwszy ekran aplikacji}
+\end{figure}
+
+Na rysunku 4.20 znajduje się profil zalogowanego użytkownika aplikacji.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{profilPolski.png}
+	\caption{Profil użytkownika}
+\end{figure}
+
+Rysunek 4.21 przedstawia ekran podglądu zleceń aplikacji.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{zleceniaMobile.png}
+	\caption{Zlecenia w aplikacji mobilnej}
+\end{figure}
+
+
+
+
+
 \section{Podsumowanie}
+Za nadrzędny cel projektu uznane zostało wytworzenie systemu dostępnego zarówno z poziomu przeglądarki internetowej i telefonu komórkowego zdolnego do poprawy jakości komunikacji pomiędzy serwisem naprawy wybranych urządzeń a jego klientem. Patrząc wstecz na ogół zadań wykonanych w trakcie ostatniego semestru oraz na finalny rezultat poczynionych prac można stwierdzić że nadrzędny cel projektu został bez wątpienia spełniony, a sam projekt można określić mianem sukcesu.
+
+Dzięki dobrej współpracy wszystkich członków zespołu udało się zrealizować nie tylko wszystkie przewidziane funkcjonalności podstawowe, ale również prawie każdą funkcjonalność rozszerzoną niniejszego projektu. Fakt ten jest tym bardziej godny podziwu, gdyż grupa nigdy wcześniej nie realizowała wspólnie żadnych projektów, a ponadto część członków dopiero na bieżąco poznawało tajniki technologii wykorzystywanych w projekcie. Przydatnymi narzędziami okazały się być wykresy Gantta i platforma Trello, które informowały członków projektu o aktualnym etapie prac projektowych, ukończonych już fragmentach aplikacji oraz o ewentualnych opóźnieniach w realizacji poszczególnych funkcjonalności.
+
+Zrealizowany produkt wyróżnia się na tle innych rozwiązań dostępnych na rynku z wielu powodów, jednak najbardziej istotne z nich to otwartość dostarczonego oprogramowania oraz dostarczenie klientowi intuicyjnej aplikacji mobilnej. Podejście takie znacząco upraszcza działania jakie musi wykonać klient aby pozyskać informację z serwisu napraw, konsekwencją czego jest skrócenie czasu oczekiwania na informacje i przekłada się na zwiększenie poziomu zadowolenia z użytkowania aplikacji i całego projektu. Z tego też względu zachowawczy i ostrożni, ale jednocześnie pełni optymizmu autorzy są zdania że przy dalszym rozwoju projektu mógłby on stać się de facto standardem w komunikacji pomiędzy serwisem a klientem. Taki stan rzeczy z pewnością przyniósłby poprawę relacji pomiędzy oboma stronami, ocieplił wizerunek serwisów w oczach klientów oraz pozwolił uniknąć sytuacji takich jak ta, która doprowadziła do powstania koncepcji tego projektu.
 
 \newpage
 \listoffigures
 \addcontentsline{toc}{section}{Spis rysunków} 
 \newpage
 \listoftables
-\addcontentsline{toc}{section}{Spis tablic}
+\addcontentsline{toc}{section}{Spis tabel}
 
 
 

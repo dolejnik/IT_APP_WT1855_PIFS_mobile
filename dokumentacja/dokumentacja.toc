@@ -1,4 +1,3 @@
-\select@language {polish}
 \ttl@change@i {\@ne }{section}{1.5em}{\addvspace {1pc}\bfseries }{\contentslabel {1.5em}}{\hspace *{-1.5em}}{\titlerule *[0.7pc]{.}\contentspage }\relax 
 \ttl@change@v {section}{}{}{}\relax 
 \contentsline {section}{\numberline {1}Wst\IeC {\k e}p}{2}
@@ -11,14 +10,16 @@
 \contentsline {subsection}{\numberline {2.4}Ryzyka projektowe}{4}
 \contentsline {section}{\numberline {3}Plan projektu}{7}
 \contentsline {subsection}{\numberline {3.1}Kamienie milowe}{7}
-\contentsline {subsection}{\numberline {3.2}Wykres Gantta}{8}
+\contentsline {subsection}{\numberline {3.2}Wykres Gantta}{7}
 \contentsline {subsection}{\numberline {3.3}Rzeczywisty nak\IeC {\l }ad pracy i koszty}{8}
 \contentsline {section}{\numberline {4}Implementacja i wdro\IeC {\.z}enie projektu}{9}
 \contentsline {subsection}{\numberline {4.1}Diagram technologii wykorzystanych w projekcie}{10}
 \contentsline {subsection}{\numberline {4.2}Instalacja projektu i wymagania sprz\IeC {\k e}towe}{11}
-\contentsline {subsection}{\numberline {4.3}Instrukcja obs\IeC {\l }ugi systemu}{12}
-\contentsline {section}{\numberline {5}Podsumowanie}{12}
-\contentsline {section}{Spis rysunk\IeC {\'o}w}{13}
-\contentsline {section}{Spis tablic}{14}
-\contentsline {section}{Literatura}{15}
+\contentsline {subsection}{\numberline {4.3}Prezentacja dzia\IeC {\l }ania i instrukcja obs\IeC {\l }ugi systemu}{12}
+\contentsline {subsubsection}{\numberline {4.3.1}Aplikacja webowa}{12}
+\contentsline {subsubsection}{\numberline {4.3.2}Aplikacja mobilna}{13}
+\contentsline {section}{\numberline {5}Podsumowanie}{13}
+\contentsline {section}{Spis rysunk\IeC {\'o}w}{14}
+\contentsline {section}{Spis tabel}{15}
+\contentsline {section}{Literatura}{16}
 \contentsfinish 
