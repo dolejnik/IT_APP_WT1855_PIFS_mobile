@@ -18,9 +18,9 @@
 \contentsline {subsection}{\numberline {4.3}Instalacja projektu i\nobreakspace {}wymagania sprz\IeC {\k e}towe}{15}
 \contentsline {subsection}{\numberline {4.4}Prezentacja dzia\IeC {\l }ania i\nobreakspace {}instrukcja obs\IeC {\l }ugi systemu}{21}
 \contentsline {subsubsection}{\numberline {4.4.1}Aplikacja webowa}{21}
-\contentsline {subsubsection}{\numberline {4.4.2}Aplikacja mobilna}{26}
-\contentsline {section}{\numberline {5}Podsumowanie}{31}
-\contentsline {section}{Spis rysunk\IeC {\'o}w}{32}
-\contentsline {section}{Spis tabel}{33}
-\contentsline {section}{Literatura}{34}
+\contentsline {subsubsection}{\numberline {4.4.2}Aplikacja mobilna}{29}
+\contentsline {section}{\numberline {5}Podsumowanie}{35}
+\contentsline {section}{Spis rysunk\IeC {\'o}w}{36}
+\contentsline {section}{Spis tabel}{37}
+\contentsline {section}{Literatura}{38}
 \contentsfinish 

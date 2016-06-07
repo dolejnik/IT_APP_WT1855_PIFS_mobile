@@ -748,7 +748,7 @@ Po zalogowaniu mamy dostęp do listy zleceń oraz, zależnie od uprawnień użyt
 	\includegraphics[width=\textwidth,height=0.6\textheight]{serwisZlecenia.png}
 	\caption{Zlecenia~- administrator}
 \end{figure}
-
+\newpage
 Administrator systemu dodatkowo ma dostęp do panelu administracyjnego, z~którego może dodawać i~odbierać role innym użytkownikom oraz zarządzać częściami i~produktami wykorzystywanymi w~serwisie. Przedstawia to rysunek 4.18.
 
 \begin{figure}[H]
@@ -756,41 +756,66 @@ Administrator systemu dodatkowo ma dostęp do panelu administracyjnego, z~które
 	\includegraphics[width=\textwidth,height=0.6\textheight]{serwisAdmin.png}
 	\caption{Panel administracyjny}
 \end{figure}
-
+\newpage
+Wszyscy użytkownicy systemu mają możliwość podejrzenia szczegółów zamówienia - ekran ten przedstawia rysunek 4.19.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.6\textheight]{szczegoly.png}
+	\caption{Szczegóły zamówienia}
+\end{figure}
+Użytkownicy o poziomie dostępu co najmniej pracownika mogą edytować szczegóły zamówienia (patrz rysunek 4.20).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.3\textheight]{aktualizacja.png}
+	\caption{Aktualizacja zamówienia}
+\end{figure}
+Na rysunku 4.21 została przedstawiona historia zmian danej naprawy i możliwość wyboru części przez klienta.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth,height=0.5\textheight]{historia.png}
+	\caption{Historia zmian i wybór części}
+\end{figure}
 \subsubsection{Aplikacja mobilna}
-Jako że aplikacja mobilna zawiera w~sobie tylko część funkcjonalności aplikacji webowej jej obsługa jest tym bardziej prosta i~intuicyjna. Działanie aplikacji zostanie przedstawione z~wykorzystaniem jej polskiej wersji językowej. Rysunki od 4.19 do 4.22 przedstawiają kolejno:
+Jako że aplikacja mobilna zawiera w~sobie tylko część funkcjonalności aplikacji webowej jej obsługa jest tym bardziej prosta i~intuicyjna. Działanie aplikacji zostanie przedstawione z~wykorzystaniem jej polskiej wersji językowej. Rysunki od 4.22 do 4.26 przedstawiają kolejno:
 \begin{itemize}
 	\item ekran logowania aplikacji,
 	\item ekran powitalny po zalogowaniu,
 	\item profil zalogowanego użytkownika,
-	\item podgląd zleceń użytkownika.
+	\item podgląd zleceń użytkownika,
+	\item podgląd szczegółów zlecenia.
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth,height=0.9\textheight]{startPolski.png}
 	\caption{Logowanie}
 \end{figure}
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth,height=0.9\textheight]{logowaniePolski.png}
 	\caption{Ekran powitalny}
 \end{figure}
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth,height=0.9\textheight]{profilPolski.png}
 	\caption{Profil użytkownika}
 \end{figure}
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth,height=0.9\textheight]{zleceniaMobile.png}
 	\caption{Zlecenia w~aplikacji mobilnej}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth,height=0.9\textheight]{szczegolyMobile.png}
+	\caption{Szczegóły zlecenia w~aplikacji mobilnej}
 \end{figure}
 
 
@@ -816,9 +841,12 @@ Zrealizowany produkt wyróżnia się na tle innych rozwiązań dostępnych na ry
 \newpage
 \addcontentsline{toc}{section}{Literatura}
 \begin{thebibliography}{9}
-\bibitem{cormen} Cormen T., Leiseron C., Rivest R., Wprowadzenie do algorytmów, WNT, 2001. 
-\bibitem{kombi} Błażewicz J., Problemy optymalizacji kombinatorycznej, PWN, Warszawa, 1996.
-\bibitem{tabu} Strona internetowa: http://www.cs.put.poznan.pl/wkotlowski/teaching/8-ts.pdf, 25.01.2013r.
+\bibitem{cormen} Freedman A., ASP.NET MVC 5 Zaawansowane programowanie, Helion, 2015. 
+\bibitem{tabu} JSONObject: https://developer.android.com/reference/org/json/JSONObject.html, dostęp 26.04.2016r.
+\bibitem{tabu} Hypertext Transfer Protocol – HTTP/1.1 1999: https://tools.ietf.org/html/rfc2616, dostęp 22.03.2016 r.
+\bibitem{bootstrap} Bootstrap 3 Tutorial: http://www.w3schools.com/bootstrap/, dostęp 27.03.2016r.
+\bibitem{bootstrap} CSS Tutorial: http://www.w3schools.com/css/, dostęp 04.04.2016r.
+\bibitem{jquery} jQuery API: http://api.jquery.com/, dostęp 28.03.2016r.
 \end{thebibliography}
 
 \end{document}

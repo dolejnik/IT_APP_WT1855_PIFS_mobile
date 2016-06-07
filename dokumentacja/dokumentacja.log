@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.28)  7 JUN 2016 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.28)  7 JUN 2016 18:53
 entering extended mode
 **dokumentacja.tex
 (dokumentacja.tex
@@ -562,7 +562,14 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(dokumentacja.aux)
+(dokumentacja.aux
+
+LaTeX Warning: Label `tabu' multiply defined.
+
+
+LaTeX Warning: Label `bootstrap' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 361.
 LaTeX Font Info:    ... okay on input line 361.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 361.
@@ -929,95 +936,109 @@ File: serwisZlecenia.png Graphic file (type png)
 Package pdftex.def Info: serwisZlecenia.png used on input line 748.
 (pdftex.def)             Requested size: 481.88321pt x 376.94902pt.
  [24 <./serwisKlient.png> <./serwisWorker.png>]
-<serwisAdmin.png, id=120, 866.48718pt x 687.31781pt>
+[25 <./serwisZlecenia.png>]
+<serwisAdmin.png, id=124, 866.48718pt x 687.31781pt>
 File: serwisAdmin.png Graphic file (type png)
  <use serwisAdmin.png>
 Package pdftex.def Info: serwisAdmin.png used on input line 756.
 (pdftex.def)             Requested size: 481.88448pt x 376.94574pt.
 
-[25 <./serwisZlecenia.png>] <startPolski.png, id=125, 1084.05pt x 1927.2pt>
+[26 <./serwisAdmin.png>] <szczegoly.png, id=129, 867.99281pt x 540.51938pt>
+File: szczegoly.png Graphic file (type png)
+
+<use szczegoly.png>
+Package pdftex.def Info: szczegoly.png used on input line 763.
+(pdftex.def)             Requested size: 481.8874pt x 376.95064pt.
+ <aktualizacja.png, id=130, 869.49844pt x 335.00156pt>
+File: aktualizacja.png Graphic file (type png)
+
+<use aktualizacja.png>
+Package pdftex.def Info: aktualizacja.png used on input line 769.
+(pdftex.def)             Requested size: 481.88744pt x 188.46858pt.
+ [27 <./szczegoly.png>]
+<historia.png, id=135, 859.71187pt x 456.20438pt>
+File: historia.png Graphic file (type png)
+ <use historia.png>
+Package pdftex.def Info: historia.png used on input line 775.
+(pdftex.def)             Requested size: 481.88138pt x 314.127pt.
+ [28 <./aktualizacja.png> <./historia.png>]
+<startPolski.png, id=141, 1084.05pt x 1927.2pt>
 File: startPolski.png Graphic file (type png)
-
-<use startPolski.png>
-Package pdftex.def Info: startPolski.png used on input line 771.
+ <use startPolski.png>
+Package pdftex.def Info: startPolski.png used on input line 790.
 (pdftex.def)             Requested size: 289.1245pt x 565.40198pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<logowaniePolski.png, id=126, 1084.05pt x 1927.2pt>
+ [29]
+<logowaniePolski.png, id=145, 1084.05pt x 1927.2pt>
 File: logowaniePolski.png Graphic file (type png)
  <use logowaniePolski.png>
-Package pdftex.def Info: logowaniePolski.png used on input line 778.
+Package pdftex.def Info: logowaniePolski.png used on input line 797.
 (pdftex.def)             Requested size: 289.1245pt x 565.40198pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<profilPolski.png, id=127, 1084.05pt x 1927.2pt>
+[30 <./startPolski.png>] <profilPolski.png, id=150, 1084.05pt x 1927.2pt>
 File: profilPolski.png Graphic file (type png)
- <use profilPolski.png>
-Package pdftex.def Info: profilPolski.png used on input line 785.
+
+<use profilPolski.png>
+Package pdftex.def Info: profilPolski.png used on input line 804.
 (pdftex.def)             Requested size: 289.1245pt x 565.40198pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<zleceniaMobile.png, id=128, 1084.05pt x 1927.2pt>
+ [31 <./logowaniePolski.png>]
+<zleceniaMobile.png, id=154, 1084.05pt x 1927.2pt>
 File: zleceniaMobile.png Graphic file (type png)
  <use zleceniaMobile.png>
-Package pdftex.def Info: zleceniaMobile.png used on input line 792.
+Package pdftex.def Info: zleceniaMobile.png used on input line 811.
 (pdftex.def)             Requested size: 289.1245pt x 565.40198pt.
 
+[32 <./profilPolski.png>] <szczegolyMobile.png, id=158, 1084.05pt x 1927.2pt>
+File: szczegolyMobile.png Graphic file (type png)
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26 <./serwisAdmin.png>]
-
-LaTeX Warning: Text page 27 contains only floats.
-
-[27 <./startPolski.png>]
-
-LaTeX Warning: Text page 28 contains only floats.
-
-[28 <./logowaniePolski.png>]
-
-LaTeX Warning: Text page 29 contains only floats.
-
-[29 <./profilPolski.png>]
-
-LaTeX Warning: Text page 30 contains only floats.
-
-[30 <./zleceniaMobile.png>] [31] (dokumentacja.lof)
+<use szczegolyMobile.png>
+Package pdftex.def Info: szczegolyMobile.png used on input line 817.
+(pdftex.def)             Requested size: 289.1245pt x 565.40198pt.
+ [33 <./zleceniaMobile.png>] [34 <./szczegolyMobile.png>] [35] (dokumentacja.lo
+f)
 \tf@lof=\write4
- [32] (dokumentacja.lot)
+ [36] (dokumentacja.lot)
 \tf@lot=\write5
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
+[]\T1/cmr/m/n/10.95 JSONObject: https://developer.android.com/reference/org/jso
+n/JSONObject.html, do-st¦p
+ []
 
-[33] [34] (dokumentacja.aux) ) 
+
+Underfull \hbox (badness 1533) in paragraph at lines 846--847
+[]\T1/cmr/m/n/10.95 Hypertext Trans-fer Pro-to-col  HTT-P/1.1 1999: https://to
+ols.ietf.org/html/rfc2616, do-st¦p
+ []
+
+[38] (dokumentacja.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6962 strings out of 493673
- 98085 string characters out of 3141517
+ 6983 strings out of 493673
+ 98473 string characters out of 3141517
  210843 words of memory out of 3000000
- 10139 multiletter control sequences out of 15000+200000
+ 10156 multiletter control sequences out of 15000+200000
  17889 words of font info for 44 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  103i,17n,103p,3396b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\macie_000\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\macie_000\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Us
-ers\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1
-095.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecbx1440.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\macie_000\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1728.pk> <C:\Users\macie
-_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on dokumentacja.pdf (35 pages, 3449494 bytes).
+ <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\ectt1095.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecbx1200.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\macie_000\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\macie_000\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Us
+ers\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1
+440.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecbx2074.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\eccc1728.pk> <C:\Users\macie_000\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on dokumentacja.pdf (39 pages, 3725689 bytes).
 PDF statistics:
- 557 PDF objects out of 1000 (max. 8388607)
+ 582 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
